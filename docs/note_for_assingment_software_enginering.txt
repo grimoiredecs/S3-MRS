@@ -1,0 +1,25 @@
+context:
+-3 type: self study, group, mentoring(one to one)
+-can access via web and app
+-reminder notification(time study approaching or status of study space change)
+-university management can monitor usage of each space + gather report on system activities
+-it staff + technical team(maintain sensors and devices and devices in the spaces)+ student + administator
+-depend on requirement -> will supply
+-user authentication-> through HCMUT_SSO
+-integrate IoT technologies to the system
+-system monitor and update the status of each study space-> via state sensors
+-student can use app or scan QR code to check in and unlock space
+-lights + air condition -> automatically turn on when room in use
+-system automatically release spaces that are reserved but not used(->find space)
+------------------------------------------------------------------------------------stack holders
+improve system in the future:(optional)
+-upload file system
+-chat box(live chat between student vs administrator)
+-report black list
+---------------------------------------------------------------------------------
+-design ->individual works->can use class diagram,......
+-implement-can implement with team
+-team meeting-once a week-> main point+ problem +....
+-need a captain
+-there will be a forum to discuss->the TA not lecturer
+-design both but implement need only one

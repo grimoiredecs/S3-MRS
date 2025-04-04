@@ -2,13 +2,13 @@
     Functional Requirements
 </h1>
 <ul>
-<li> Patient Management: Register patients, update patient records, manage medical history, and retrieve patient details.<li>
+<li> Patient Management: Register patients, update patient records, manage medical history, and retrieve patient details.</li>
 
-<li>Appointment Scheduling: Allow patients to book appointments with doctors, update appointment status, and manage doctor availability.<li>
+<li>Appointment Scheduling: Allow patients to book appointments with doctors, update appointment status, and manage doctor availability.</li>
 
-<li> Billing: Handle patient billing, payment processing, and generate invoices.<li>
+<li> Billing: Handle patient billing, payment processing, and generate invoices.</li>
 
-<li>Staff Management: Manage doctor and nurse information, scheduling, and workload tracking.<li>
+<li>Staff Management: Manage doctor and nurse information, scheduling, and workload tracking.</li>
 </ul>
 <h1>
 Non-functional
