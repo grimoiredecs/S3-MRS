@@ -1,0 +1,115 @@
+/* Wrapper styling to center the login box */
+.wrapper {
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+}
+
+/* Login form container */
+form {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    border-radius: 16px;
+    padding: 40px 30px;
+    width: 320px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    color: #fff;
+    position: relative;
+}
+
+/* Form title */
+form h1 {
+    text-align: center;
+    margin-bottom: 24px;
+    font-size: 24px;
+}
+
+/* Input group container */
+.input-box {
+    position: relative;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 12px 36px 12px 12px; /* enough right padding for the icon */
+    border: none;
+    border-bottom: 2px solid #fff;
+    background: transparent;
+    color: #222;
+    font-size: 16px;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.input-box .icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+    pointer-events: none;
+}
+/* Remember me and forgot password section */
+.remember-forgot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.remember-forgot a {
+    color: #d1d1d1;
+    text-decoration: none;
+}
+
+.remember-forgot a:hover {
+    text-decoration: underline;
+}
+
+/* Login button */
+button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(to right, #1e90ff, #1c7ef7);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background: linear-gradient(to right, #1c7ef7, #1a6de0);
+}
+
+/* Registration link */
+.register-link {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+.register-link a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+/* Error message */
+.error {
+    color: #ffbbbb;
+    background-color: rgba(255, 0, 0, 0.1);
+    padding: 8px 12px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    font-size: 14px;
+    text-align: center;
+}

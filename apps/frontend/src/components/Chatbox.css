@@ -1,0 +1,60 @@
+/* src/components/ChatBox.css */
+
+.chat-box {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 280px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    z-index: 999;
+}
+
+.chat-header {
+    background: #1e90ff;
+    color: white;
+    padding: 12px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.chat-body {
+    padding: 10px;
+    height: 180px;
+    overflow-y: auto;
+    font-size: 14px;
+}
+
+.chat-message {
+    margin-bottom: 10px;
+}
+
+.chat-message.bot {
+    color: #1e90ff;
+}
+
+.chat-input {
+    display: flex;
+    border-top: 1px solid #eee;
+}
+
+.chat-input input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    font-size: 14px;
+    outline: none;
+}
+
+.chat-input button {
+    padding: 0 16px;
+    background: #1e90ff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
