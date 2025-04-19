@@ -1,8 +1,11 @@
-import React from 'react';
-import './HomePage.css';
-import { FaBell, FaComments, FaUserCircle, FaChevronDown } from 'react-icons/fa';
+import React, { useState } from "react";
+import { FaBell, FaComments, FaUserCircle, FaChevronDown } from "react-icons/fa";
+import ChatBox from "./ChatBox"; // <-- import
+import "./HomePage.css";
 
 const HomePage: React.FC = () => {
+    const [showChat, setShowChat] = useState(false);
+
     return (
         <div className="homepage">
             <nav className="navbar">
@@ -14,7 +17,10 @@ const HomePage: React.FC = () => {
                 </div>
                 <div className="nav-icons">
                     <FaBell />
-                    <FaComments />
+                    <FaComments
+                        onClick={() => setShowChat((prev) => !prev)}
+                        style={{ cursor: "pointer" }}
+                    />
                     <FaUserCircle />
                     <FaChevronDown />
                 </div>
@@ -27,6 +33,8 @@ const HomePage: React.FC = () => {
                     <button>More</button>
                 </div>
             </div>
+
+            {showChat && <ChatBox />}
         </div>
     );
 };
