@@ -5,47 +5,39 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e959cca6-4b50-4453-9576-0abfd7f7ad17" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../API-GATEWAY/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../API-GATEWAY/.idea/API-GATEWAY.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../API-GATEWAY/.idea/jsLibraryMappings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../API-GATEWAY/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../API-GATEWAY/.idea/runConfigurations/bin_www.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../API-GATEWAY/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Admin/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Admin/.idea/Admin.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Admin/.idea/jsLibraryMappings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Admin/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Admin/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Authentication/.idea/Authentication.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../RoomManagement/.idea/RoomManagement.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../RoomManagement/.idea/jsLibraryMappings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../RoomManagement/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../RoomManagement/.idea/runConfigurations/bin_www.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../RoomManagement/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/StudentManagement.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations/bin_www.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/business/StudentEditService.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/business/StudentQueryService.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/business/test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/database/.env" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/database/db.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/database/seed.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/persistence/studentRepository.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/persistence/testRepo.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/presentation/controllers/studentController.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/presentation/routes/studentRoutes.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../frontend/src/components/AboutUs.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../frontend/src/components/AboutUs.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../frontend/src/components/IoT.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../frontend/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../frontend/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../frontend/src/components/Chatbox.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../frontend/src/components/Chatbox.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../frontend/src/components/Chatbox.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../frontend/src/components/Chatbox.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../frontend/src/components/Homepage.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../frontend/src/components/Homepage.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../frontend/src/components/Homepage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../frontend/src/components/Homepage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../frontend/src/components/LoginBox.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../frontend/src/components/LoginBox.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../RoomManagement/src/business/editService.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../RoomManagement/src/business/queryService.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../RoomManagement/src/database/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../RoomManagement/src/database/db.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../RoomManagement/src/database/seed.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../RoomManagement/src/persistence/roomRepository.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../RoomManagement/src/persistence/test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../RoomManagement/src/presentation/controllers/roomController.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../RoomManagement/src/presentation/routes/roomRoutes.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../StaffManagement/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../StaffManagement/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../StaffManagement/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../StaffManagement/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../StaffManagement/src/business/StaffService.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../StaffManagement/src/business/test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../StaffManagement/src/database/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../StaffManagement/src/database/db.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../StaffManagement/src/persistence/StaffRepository.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../StaffManagement/src/persistence/test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../StaffManagement/src/presentation/StaffController.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../StaffManagement/src/presentation/staffRoutes.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../StaffManagement/src/utils/generateStaffId.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/business/AuthenticationService.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/presentation/controllers/authController.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/presentation/routes/authRoutes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RoomManagement/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../RoomManagement/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RoomManagement/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../RoomManagement/node_modules/.package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RoomManagement/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../RoomManagement/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RoomManagement/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../RoomManagement/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RoomManagement/routes/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RoomManagement/routes/users.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,7 +101,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1745256807362</updated>
-      <workItem from="1745256808423" duration="3900000" />
+      <workItem from="1745256808423" duration="6762000" />
     </task>
     <servers />
   </component>

@@ -5,52 +5,51 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f26fd1aa-31f7-449e-bef2-77149a7551b1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../API-GATEWAY/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../API-GATEWAY/.idea/API-GATEWAY.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../API-GATEWAY/.idea/jsLibraryMappings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../API-GATEWAY/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../API-GATEWAY/.idea/runConfigurations/bin_www.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../API-GATEWAY/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Admin/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Admin/.idea/Admin.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Admin/.idea/jsLibraryMappings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Admin/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Admin/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Authentication/.idea/Authentication.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/RoomManagement.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations/bin_www.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../StudentManagement/.idea/StudentManagement.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../StudentManagement/.idea/jsLibraryMappings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../StudentManagement/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../StudentManagement/.idea/runConfigurations/bin_www.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../StudentManagement/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../StudentManagement/src/business/StudentEditService.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../StudentManagement/src/business/StudentQueryService.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../StudentManagement/src/business/test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../StudentManagement/src/database/.env" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../StudentManagement/src/database/db.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../StudentManagement/src/database/seed.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../StudentManagement/src/persistence/studentRepository.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../StudentManagement/src/persistence/testRepo.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../StudentManagement/src/presentation/controllers/studentController.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../StudentManagement/src/presentation/routes/studentRoutes.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../frontend/src/components/AboutUs.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../frontend/src/components/AboutUs.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../frontend/src/components/IoT.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../frontend/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../frontend/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../frontend/src/components/Chatbox.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../frontend/src/components/Chatbox.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../frontend/src/components/Chatbox.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../frontend/src/components/Chatbox.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../frontend/src/components/Homepage.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../frontend/src/components/Homepage.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../frontend/src/components/Homepage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../frontend/src/components/Homepage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../frontend/src/components/LoginBox.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../frontend/src/components/LoginBox.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/business/editService.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/business/queryService.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/database/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/database/db.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/database/seed.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/persistence/roomRepository.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/persistence/test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/presentation/controllers/roomController.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/presentation/routes/roomRoutes.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../StaffManagement/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../StaffManagement/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../StaffManagement/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../StaffManagement/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../StaffManagement/src/business/StaffService.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../StaffManagement/src/business/test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../StaffManagement/src/database/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../StaffManagement/src/database/db.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../StaffManagement/src/persistence/StaffRepository.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../StaffManagement/src/persistence/test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../StaffManagement/src/presentation/StaffController.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../StaffManagement/src/presentation/staffRoutes.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../StaffManagement/src/utils/generateStaffId.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../StudentManagement/src/business/AuthenticationService.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../StudentManagement/src/presentation/controllers/authController.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../StudentManagement/src/presentation/routes/authRoutes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/users.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../StudentManagement/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../StudentManagement/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../StudentManagement/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/../StudentManagement/app.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
@@ -59,6 +58,9 @@
   "associatedIndex": 6
 }]]></component>
   <component name="ProjectId" id="2w39XC3uq3ClVC1SUEeD1uu5gbu" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -69,7 +71,6 @@
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "NtK",
     "javascript.nodejs.core.library.configured.version": "23.5.0",
     "javascript.nodejs.core.library.typings.version": "22.14.1",
@@ -79,9 +80,15 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_interpreter_path": "node",
     "nodejs_package_manager_path": "npm",
+    "ts.external.directory.path": "/Applications/WebStorm.app/Contents/plugins/javascript-plugin/jsLanguageServicesImpl/external",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/database" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -96,7 +103,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1745259427958</updated>
-      <workItem from="1745259429026" duration="932000" />
+      <workItem from="1745259429026" duration="5275000" />
     </task>
     <servers />
   </component>
