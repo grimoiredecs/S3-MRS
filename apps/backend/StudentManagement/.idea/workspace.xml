@@ -5,19 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e959cca6-4b50-4453-9576-0abfd7f7ad17" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../Centralized-Gateway/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Centralized-Gateway/.idea/Centralized-Gateway.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Centralized-Gateway/.idea/jsLibraryMappings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Centralized-Gateway/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Centralized-Gateway/.idea/runConfigurations/bin_www.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Centralized-Gateway/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Centralized-Gateway/middlewares/auth.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Centralized-Gateway/routes/proxy.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BookingManagement/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../BookingManagement/node_modules/.package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BookingManagement/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../BookingManagement/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BookingManagement/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../BookingManagement/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../frontend/src/components/BookingPage.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../frontend/src/components/BookingPage.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../RoomManagement/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../RoomManagement/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontend/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../frontend/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontend/src/components/Homepage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../frontend/src/components/Homepage.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

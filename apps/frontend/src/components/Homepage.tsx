@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { FaBell, FaComments, FaUserCircle, FaChevronDown } from "react-icons/fa";
 import ChatBox from "./ChatBox";
+import { Link } from "react-router-dom";
 import "./HomePage.css";
 
 const HomePage: React.FC = () => {
@@ -15,7 +16,7 @@ const HomePage: React.FC = () => {
                 <div className="nav-links">
                     <a href="#">Home</a>
                     <a href="#">Dashboard</a>
-                    <a href="#">Book</a>
+                    <Link to="/book">Book</Link> {/* ✅ working router link */}
                 </div>
 
                 <div className="nav-icons">
