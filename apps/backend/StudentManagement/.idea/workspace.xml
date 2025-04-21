@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e959cca6-4b50-4453-9576-0abfd7f7ad17" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../../frontend/src/components/BookingPage.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../frontend/src/components/BookingPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../RoomManagement/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../RoomManagement/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../frontend/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../frontend/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../frontend/src/components/Homepage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../frontend/src/components/Homepage.tsx" afterDir="false" />
-    </list>
+    <list default="true" id="e959cca6-4b50-4453-9576-0abfd7f7ad17" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

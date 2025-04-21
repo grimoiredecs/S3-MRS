@@ -11,33 +11,37 @@
 /* === NAVBAR === */
 .navbar {
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
     background-color: #1e0aff;
-    padding: 12px 30px;
-    color: white;
+    padding: 10px 30px;
+    position: relative;
 }
 
 .logo {
-    width: 48px;
+    width: 50px;
     height: auto;
+}
+
+/* ✅ center links */
+.nav-links {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 30px;
 }
 
 .nav-links a {
     color: white;
     text-decoration: none;
-    margin: 0 20px;
     font-weight: 600;
-    transition: opacity 0.2s;
-}
-
-.nav-links a:hover {
-    opacity: 0.8;
+    font-size: 16px;
 }
 
 .nav-icons {
     display: flex;
-    gap: 16px;
+    gap: 15px;
     font-size: 18px;
     color: white;
 }
