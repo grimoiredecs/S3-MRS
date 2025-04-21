@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="e959cca6-4b50-4453-9576-0abfd7f7ad17" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../API-GATEWAY/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../API-GATEWAY/.idea/API-GATEWAY.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../API-GATEWAY/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../API-GATEWAY/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../API-GATEWAY/.idea/runConfigurations/bin_www.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../API-GATEWAY/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Admin/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Admin/.idea/Admin.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Admin/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Admin/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Admin/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Authentication/.idea/Authentication.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../RoomManagement/.idea/RoomManagement.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../RoomManagement/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../RoomManagement/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../RoomManagement/.idea/runConfigurations/bin_www.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../RoomManagement/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/StudentManagement.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations/bin_www.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/business/StudentEditService.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/business/StudentQueryService.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/business/test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/database/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/database/db.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/database/seed.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/persistence/studentRepository.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/persistence/testRepo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/presentation/controllers/studentController.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/presentation/routes/studentRoutes.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../frontend/src/components/AboutUs.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../frontend/src/components/AboutUs.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../frontend/src/components/IoT.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontend/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../frontend/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontend/src/components/Chatbox.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../frontend/src/components/Chatbox.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontend/src/components/Chatbox.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../frontend/src/components/Chatbox.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontend/src/components/Homepage.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../frontend/src/components/Homepage.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontend/src/components/Homepage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../frontend/src/components/Homepage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontend/src/components/LoginBox.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../frontend/src/components/LoginBox.tsx" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 7
+}]]></component>
+  <component name="ProjectId" id="2w34DycWdpC1q24FahprrP8mpPW" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Node.js.app.js.executor": "Run",
+    "Node.js.bin/www.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "NtK",
+    "javascript.nodejs.core.library.configured.version": "23.5.0",
+    "javascript.nodejs.core.library.typings.version": "22.14.1",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_interpreter_path": "node",
+    "nodejs_package_manager_path": "npm",
+    "ts.external.directory.path": "/Applications/WebStorm.app/Contents/plugins/javascript-plugin/jsLanguageServicesImpl/external",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-f27c65a3e318-JavaScript-WS-251.23774.424" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e959cca6-4b50-4453-9576-0abfd7f7ad17" name="Changes" comment="" />
+      <created>1745256807362</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1745256807362</updated>
+      <workItem from="1745256808423" duration="3900000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

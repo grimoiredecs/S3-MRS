@@ -8,6 +8,7 @@ const LoginBox: FC = () => {
     const [password, setPassword] = useState<string>("");
     const [error, setError] = useState<string>("");
 
+    
     const navigate = useNavigate();
 
     const handleSubmit = (e: React.FormEvent) => {
