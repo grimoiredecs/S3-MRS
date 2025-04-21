@@ -5,39 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f26fd1aa-31f7-449e-bef2-77149a7551b1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/business/editService.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/business/queryService.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/database/.env" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/database/db.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/database/seed.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/persistence/roomRepository.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/persistence/test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/presentation/controllers/roomController.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/presentation/routes/roomRoutes.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../StaffManagement/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../StaffManagement/.idea/jsLibraryMappings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../StaffManagement/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../StaffManagement/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../StaffManagement/src/business/StaffService.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../StaffManagement/src/business/test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../StaffManagement/src/database/.env" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../StaffManagement/src/database/db.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../StaffManagement/src/persistence/StaffRepository.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../StaffManagement/src/persistence/test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../StaffManagement/src/presentation/StaffController.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../StaffManagement/src/presentation/staffRoutes.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../StaffManagement/src/utils/generateStaffId.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../StudentManagement/src/business/AuthenticationService.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../StudentManagement/src/presentation/controllers/authController.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../StudentManagement/src/presentation/routes/authRoutes.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Centralized-Gateway/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Centralized-Gateway/.idea/Centralized-Gateway.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Centralized-Gateway/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Centralized-Gateway/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Centralized-Gateway/.idea/runConfigurations/bin_www.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Centralized-Gateway/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Centralized-Gateway/middlewares/auth.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Centralized-Gateway/routes/proxy.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BookingManagement/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../BookingManagement/node_modules/.package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BookingManagement/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../BookingManagement/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BookingManagement/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../BookingManagement/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/users.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../StudentManagement/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../StudentManagement/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../StudentManagement/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/../StudentManagement/app.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,7 +83,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1745259427958</updated>
-      <workItem from="1745259429026" duration="5275000" />
+      <workItem from="1745259429026" duration="7489000" />
     </task>
     <servers />
   </component>
