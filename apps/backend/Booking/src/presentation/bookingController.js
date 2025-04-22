@@ -1,0 +1,44 @@
+
+const BookingQueryService = require('../business/BookingQueryService');
+const BookingCommandService = require('../business/BookingEditService');
+
+const BookingController = {
+    async getById(req, res) {
+        try {
+            const booking = await BookingQueryService.getById(req.params.id);
+            if (!booking) return res.status(404).json({ message: 'Booking not found' });
+            res.json(booking);
+        } catch (err) {
+            res.status(500).json({ error: err.message });
+        }
+    },
+
+    async getByUser(req, res) {
+        try {
+            const bookings = await BookingQueryService.getByUser(req.params.userId);
+            res.json(bookings);
+        } catch (err) {
+            res.status(500).json({ error: err.message });
+        }
+    },
+
+    async create(req, res) {
+        try {
+            const result = await BookingCommandService.create(req.body);
+            res.status(201).json(result);
+        } catch (err) {
+            res.status(400).json({ error: err.message });
+        }
+    },
+
+    async delete(req, res) {
+        try {
+            const result = await BookingCommandService.delete(req.params.id);
+            res.json(result);
+        } catch (err) {
+            res.status(500).json({ error: err.message });
+        }
+    }
+};
+
+module.exports = BookingController;
