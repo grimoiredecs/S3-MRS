@@ -1,30 +1,35 @@
 const {
     save,
     update,
-    findByID
+    findByID,
+    checkRoomAvailability,
+    updateRemainingSeats
 } = require('../persistence/roomRepository');
 
-const { produceRoomEvent } = require('../events/roomProducer');
-
-// ✅ Create a new room and emit ROOM_CREATED event
+// ✅ Create a new room
 const createRoom = async (room) => {
     const existing = await findByID(room.room_id);
     if (existing) throw new Error('Room with this ID already exists');
 
-    const saved = await save(room);
-    await produceRoomEvent('ROOM_CREATED', room);
+    // Ensure the room's remaining seats are initialized correctly
+    room.remainingSeats = room.capacity; // set initial remaining seats to room capacity
 
+    const saved = await save(room);
     return saved;
 };
 
-// ✅ Update an existing room and emit ROOM_UPDATED
+// ✅ Update an existing room
 const updateRoom = async (room) => {
     const existing = await findByID(room.room_id);
     if (!existing) throw new Error('Room not found');
 
-    const updated = await update(room);
-    await produceRoomEvent('ROOM_UPDATED', room);
+    // If room status or capacity changes, we might need to recheck availability
+    if (room.capacity !== existing.capacity) {
+        const remainingSeats = await updateRemainingSeats(room.room_id, room.capacity);
+        room.remainingSeats = remainingSeats;
+    }
 
+    const updated = await update(room);
     return updated;
 };
 
@@ -35,8 +40,6 @@ const changeRoomStatus = async (room_id, newStatus) => {
 
     room.status = newStatus;
     const updated = await update(room);
-    await produceRoomEvent('ROOM_STATUS_CHANGED', { room_id, status: newStatus });
-
     return updated;
 };
 
@@ -47,14 +50,25 @@ const changeRoomCondition = async (room_id, newCondition) => {
 
     room.condition = newCondition;
     const updated = await update(room);
-    await produceRoomEvent('ROOM_CONDITION_CHANGED', { room_id, condition: newCondition });
-
     return updated;
+};
+
+// ✅ Check if a room has enough available seats
+const checkRoomCapacity = async (room_id, userNumber) => {
+    const room = await findByID(room_id);
+    if (!room) throw new Error('Room not found');
+
+    if (room.remainingSeats < userNumber) {
+        throw new Error(`Room does not have enough seats. Required: ${userNumber}, Available: ${room.remainingSeats}`);
+    }
+
+    return room;
 };
 
 module.exports = {
     createRoom,
     updateRoom,
     changeRoomStatus,
-    changeRoomCondition
+    changeRoomCondition,
+    checkRoomCapacity
 };

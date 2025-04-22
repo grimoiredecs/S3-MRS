@@ -11,6 +11,11 @@ const bookingSchema = new mongoose.Schema({
     timestamps: true
 });
 
+// Static method to create a booking
+bookingSchema.statics.createBooking = async function (bookingData) {
+    return await this.create(bookingData); // ✅ call Mongoose's built-in create()
+};
+
 // Static method to query bookings with optional filters
 bookingSchema.statics.queryBookings = async function (filters = {}) {
     return await this.find(filters);
