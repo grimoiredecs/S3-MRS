@@ -1,15 +1,19 @@
-const StudentRepository = require('../persistence/studentRepository');
+const { StudentRepository } = require('../persistence/studentRepository');
 
-const StudentQueryService = {
-    async getAllStudents() {
-        return await StudentRepository.getAll();
-    },
+class StudentQueryService {
+    constructor() {
+        this.repo = new StudentRepository();
+    }
 
     async getStudentById(id) {
-        const student = await StudentRepository.getById(id);
-        if (!student) throw new Error(`Student with ID ${id} not found`);
+        const student = await this.repo.findById(id);
+        if (!student) throw new Error('Student not found');
         return student;
-    },
-};
+    }
 
-module.exports = StudentQueryService;
+    async getAllStudents() {
+        return await this.repo.findAll();
+    }
+}
+
+module.exports = new StudentQueryService();

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { FaBell, FaComments, FaUserCircle, FaChevronDown } from "react-icons/fa";
+import { FaBell, FaComments, FaUserCircle } from "react-icons/fa";
 import ChatBox from "./ChatBox";
 import { Link } from "react-router-dom";
 import "./HomePage.css";

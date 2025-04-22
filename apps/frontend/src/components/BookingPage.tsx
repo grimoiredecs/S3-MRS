@@ -1,14 +1,28 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import "./BookingPage.css";
 
-// Room list and durations
+import React, { useState } from "react";
+import { useUserContext } from "../context/UserContext";
+import { Link } from "react-router-dom";
+import axios from "axios";
+import "./BookingPage.css";
+import "./LoginBox"
+
+// types/Booking.ts
+export interface Booking {
+    _id: string;
+    userId: string;
+    roomId: string;
+    startTime: string;
+    endTime: string;
+    userNumber: number;
+    createdAt: string;
+    updatedAt: string;
+}
+
 const rooms = ["303-A4", "501-A4", "101-A4", "202-B1", "405-C5", "601-B4", "102-C6"];
-const durations = ["30 minutes", "45 minutes", "1 hour", "2 hours", "3 hours"];
-const privateRoomAvailable = ["501-A4", "202-B1", "405-C5", "102-C6"];
+const durations = ["30 minutes", "45 minutes", "1 hour", "2 hours"];
 const seats = [1, 2, 3, 4, 5];
 
-// Generate time in 15-minute intervals from 07:00 to 18:00
+// Generate time slots in 15-minute intervals
 const times: string[] = [];
 for (let hour = 7; hour <= 18; hour++) {
     for (let min = 0; min < 60; min += 15) {
@@ -17,16 +31,16 @@ for (let hour = 7; hour <= 18; hour++) {
 }
 
 const BookingPage: React.FC = () => {
+    const { userId } = useUserContext();
     const [room, setRoom] = useState("");
     const [date, setDate] = useState("");
     const [startTime, setStartTime] = useState("");
     const [duration, setDuration] = useState("");
     const [userNumber, setUserNumber] = useState("");
-    const [privateRoom, setPrivateRoom] = useState(false);
     const [booked, setBooked] = useState(false);
     const [error, setError] = useState("");
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
 
         const selectedYear = new Date(date).getFullYear();
@@ -35,13 +49,31 @@ const BookingPage: React.FC = () => {
             return;
         }
 
-        if (!room || !date || !startTime || !duration || (!privateRoom && !userNumber)) {
+        if (!room || !date || !startTime || !duration || !userNumber) {
             setError("❌ Please fill in all required fields.");
             return;
         }
 
         setError("");
-        setBooked(true);
+
+        const startDateTime = new Date(`${date}T${startTime}:00`);
+        const endDateTime = new Date(startDateTime);
+        const durationMinutes = parseInt(duration.split(" ")[0], 10);
+        endDateTime.setMinutes(startDateTime.getMinutes() + durationMinutes);
+
+        const bookingPayload = {
+            userId: userId,
+            roomId: room,
+            startTime: startDateTime.toISOString(),
+            endTime: endDateTime.toISOString(),
+            userNumber: Number(userNumber)
+        };
+
+        {
+            const res = await axios.post("http://localhost:3003/bookings", bookingPayload);
+            console.log("✅ Booking confirmed:", res.data);
+            setBooked(true);
+        }
     };
 
     const handleReset = () => {
@@ -50,13 +82,11 @@ const BookingPage: React.FC = () => {
         setStartTime("");
         setDuration("");
         setUserNumber("");
-        setPrivateRoom(false);
         setBooked(false);
     };
 
     return (
         <div className="homepage">
-            {/* Navbar */}
             <nav className="navbar">
                 <img src="/bklogo.png" alt="BK Logo" className="logo" />
                 <div className="nav-links">
@@ -66,7 +96,6 @@ const BookingPage: React.FC = () => {
                 </div>
             </nav>
 
-            {/* Main booking section */}
             <div className="booking-content">
                 {!booked ? (
                     <form className="booking-form" onSubmit={handleSubmit}>
@@ -106,30 +135,13 @@ const BookingPage: React.FC = () => {
                             ))}
                         </select>
 
-                        {/* Private room toggle (only for supported rooms) */}
-                        {privateRoomAvailable.includes(room) && (
-                            <label>
-                                <input
-                                    type="checkbox"
-                                    checked={privateRoom}
-                                    onChange={(e) => setPrivateRoom(e.target.checked)}
-                                />
-                                {' '}Require private room
-                            </label>
-                        )}
-
-                        {/* Number of users (only if not private room) */}
-                        {!privateRoom && (
-                            <>
-                                <label>Number of users (1–5)</label>
-                                <select value={userNumber} onChange={(e) => setUserNumber(e.target.value)} required>
-                                    <option value="">-- Choose number of users --</option>
-                                    {seats.map((num) => (
-                                        <option key={num} value={num}>{num}</option>
-                                    ))}
-                                </select>
-                            </>
-                        )}
+                        <label>Number of users (1–5)</label>
+                        <select value={userNumber} onChange={(e) => setUserNumber(e.target.value)} required>
+                            <option value="">-- Choose number of users --</option>
+                            {seats.map((num) => (
+                                <option key={num} value={num}>{num}</option>
+                            ))}
+                        </select>
 
                         {error && <p className="error-message">{error}</p>}
 
@@ -142,8 +154,7 @@ const BookingPage: React.FC = () => {
                         <p><strong>Date:</strong> {date}</p>
                         <p><strong>Time:</strong> {startTime}</p>
                         <p><strong>Duration:</strong> {duration}</p>
-                        <p><strong>Private Room:</strong> {privateRoom ? "Yes" : "No"}</p>
-                        <p><strong>Number of Users:</strong> {privateRoom ? "6+" : userNumber}</p>
+                        <p><strong>Number of Users:</strong> {userNumber}</p>
                         <button onClick={handleReset}>Book Another</button>
                     </div>
                 )}

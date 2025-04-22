@@ -1,14 +1,17 @@
 import React, { useState, FC } from "react";
 import { FaUser, FaLock } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
+import "./LoginBox.css"
 import axios from "axios";
-import "./LoginBox.css";
+import { useUserContext } from "../context/UserContext";
 
 const LoginBox: FC = () => {
     const [username, setUsername] = useState<string>("");
     const [password, setPassword] = useState<string>("");
     const [error, setError] = useState<string>("");
     const navigate = useNavigate();
+    const { setUserId } = useUserContext();
+
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
@@ -24,6 +27,11 @@ const LoginBox: FC = () => {
             if (!token) throw new Error("No token returned");
 
             localStorage.setItem("token", token);
+            const userId = response.data.id;
+            setUserId(userId);
+
+            console.log("✅ Logged in as:", userId);
+            localStorage.setItem("id", userId);
             console.log("✅ Logged in. Token:", token);
             navigate("/home");
         } catch (err: any) {

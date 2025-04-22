@@ -12,8 +12,8 @@ const { createBooking, getBookingById } = require('../persistence/bookingReposit
 
         // Sample booking data
         const sampleBooking = {
-            userId: '2355921',   // MUST be a valid ID in StudentManagement!
-            roomId: '604-A1',
+            userId: '2252304',   // MUST be a valid ID in StudentManagement!
+            roomId: '102-C6',
             startTime: new Date(),
             endTime: new Date(Date.now() + 2 * 60 *60* 1000), // +2 hours
             userNumber: 3

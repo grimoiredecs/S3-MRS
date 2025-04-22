@@ -2,6 +2,8 @@ const express = require('express');
 const app = express();
 const bookingRoutes = require('./src/presentation/bookingRoutes');
 
+const connectMongo = require('./src/database/mongo');
+connectMongo(); // ✅ ensure this runs before anything else
 app.use(express.json());
 
 // ✅ Health check route

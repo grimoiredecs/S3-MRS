@@ -1,5 +1,4 @@
 const { StudentRepository } = require('../persistence/studentRepository');
-const { emitEvent } = require('../events/emitEvents');
 
 class StudentEditService {
     constructor() {
@@ -8,23 +7,11 @@ class StudentEditService {
 
     async addStudent(student) {
         const year = this.getYearFromId(student.id);
-        const studentWithYear = { ...student, year };
-        await this.repo.save(studentWithYear);
-
-        // 🔥 Emit event
-        await emitEvent('student-events', 'student-created', studentWithYear);
-
-        return studentWithYear;
-    }
-
-    async updateStudent(id, data) {
-        await this.repo.update(id, data);
-        await emitEvent('student-events', 'student-updated', { id, ...data });
+        return await this.repo.save({ ...student, year });
     }
 
     async deleteStudent(id) {
-        await this.repo.delete(id);
-        await emitEvent('student-events', 'student-deleted', { id });
+        return await this.repo.delete(id);
     }
 
     getYearFromId(id) {
@@ -40,4 +27,4 @@ class StudentEditService {
     }
 }
 
-module.exports = { StudentEditService };
+module.exports = new StudentEditService();
