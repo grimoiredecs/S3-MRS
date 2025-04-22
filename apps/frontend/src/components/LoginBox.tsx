@@ -1,28 +1,36 @@
 import React, { useState, FC } from "react";
 import { FaUser, FaLock } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 import "./LoginBox.css";
 
 const LoginBox: FC = () => {
     const [username, setUsername] = useState<string>("");
     const [password, setPassword] = useState<string>("");
     const [error, setError] = useState<string>("");
-
-    
     const navigate = useNavigate();
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
+        setError("");
 
-        // optional validation logic here
-        if (username && password) {
-            // Simulate login success
-            navigate("/home"); // ✅ navigate to HomePage
-        } else {
-            setError("Please enter username and password");
+        try {
+            const response = await axios.post("http://localhost:3006/auth/login", {
+                email: username,
+                password: password,
+            });
+
+            const token = response.data.token;
+            if (!token) throw new Error("No token returned");
+
+            localStorage.setItem("token", token);
+            console.log("✅ Logged in. Token:", token);
+            navigate("/home");
+        } catch (err: any) {
+            console.error("❌ Login error:", err);
+            setError(err.response?.data?.message || "Login failed");
         }
     };
-
 
     return (
         <div className="wrapper">
@@ -32,7 +40,7 @@ const LoginBox: FC = () => {
                 <div className="input-box">
                     <input
                         type="text"
-                        placeholder="Username"
+                        placeholder="Email"
                         required
                         value={username}
                         onChange={(e) => setUsername(e.target.value)}
@@ -55,7 +63,6 @@ const LoginBox: FC = () => {
                     <label>
                         <input type="checkbox" /> Remember me
                     </label>
-                    <a href="#">Forgot Password?</a>
                 </div>
 
                 {error && <p className="error">{error}</p>}
@@ -63,9 +70,6 @@ const LoginBox: FC = () => {
                 <button type="submit">Login</button>
 
                 <div className="register-link">
-                    <p>
-                        Don't have an account? <a href="#">Register</a>
-                    </p>
                 </div>
             </form>
         </div>

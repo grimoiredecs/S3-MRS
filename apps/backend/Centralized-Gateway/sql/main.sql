@@ -16,5 +16,7 @@ INSERT INTO users (id, email, password_hash, role) VALUES
 ('2750002', 'staff2@hcmut.edu.vn',  '$2b$10$X6OaZt2XrE7BLfy3N.q05uY2K0m.PFosCCS3eePv2y3hyv1B1uN5u', 'staff'),
 ('2850001', 'admin1@hcmut.edu.vn',  '$2b$10$X6OaZt2XrE7BLfy3N.q05uY2K0m.PFosCCS3eePv2y3hyv1B1uN5u', 'admin');
 
+INSERT INTO users (id, email, password_hash, role) VALUES
+('2252304', 'man@hcmut.edu.vn','123','student')
 
 select * from users
