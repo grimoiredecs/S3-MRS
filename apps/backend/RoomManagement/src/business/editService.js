@@ -1,32 +1,55 @@
-const { save, update } = require('../persistence/roomRepository');
-const { findByID } = require('../persistence/roomRepository');
+const {
+    save,
+    update,
+    findByID
+} = require('../persistence/roomRepository');
 
-// ✅ Create a new room with equipment
+const { produceRoomEvent } = require('../events/roomProducer');
+
+// ✅ Create a new room and emit ROOM_CREATED event
 const createRoom = async (room) => {
-    return await save(room);
+    const existing = await findByID(room.room_id);
+    if (existing) throw new Error('Room with this ID already exists');
+
+    const saved = await save(room);
+    await produceRoomEvent('ROOM_CREATED', room);
+
+    return saved;
 };
 
-// ✅ Update full room object (after fetching it)
+// ✅ Update an existing room and emit ROOM_UPDATED
 const updateRoom = async (room) => {
-    return await update(room);
+    const existing = await findByID(room.room_id);
+    if (!existing) throw new Error('Room not found');
+
+    const updated = await update(room);
+    await produceRoomEvent('ROOM_UPDATED', room);
+
+    return updated;
 };
 
-// ✅ Change status only
+// ✅ Change only the status of a room
 const changeRoomStatus = async (room_id, newStatus) => {
     const room = await findByID(room_id);
     if (!room) throw new Error('Room not found');
 
     room.status = newStatus;
-    return await update(room);
+    const updated = await update(room);
+    await produceRoomEvent('ROOM_STATUS_CHANGED', { room_id, status: newStatus });
+
+    return updated;
 };
 
-// ✅ Change condition only
+// ✅ Change only the condition of a room
 const changeRoomCondition = async (room_id, newCondition) => {
     const room = await findByID(room_id);
     if (!room) throw new Error('Room not found');
 
     room.condition = newCondition;
-    return await update(room);
+    const updated = await update(room);
+    await produceRoomEvent('ROOM_CONDITION_CHANGED', { room_id, condition: newCondition });
+
+    return updated;
 };
 
 module.exports = {

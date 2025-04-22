@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { FaBell, FaComments, FaUserCircle, FaChevronDown } from "react-icons/fa";
 import ChatBox from "./ChatBox";
 import { Link } from "react-router-dom";
@@ -7,6 +8,7 @@ import "./HomePage.css";
 const HomePage: React.FC = () => {
     const [showChat, setShowChat] = useState(false);
 
+    const navigate = useNavigate();
     return (
         <div className="homepage">
             {/* === Navbar === */}
@@ -14,7 +16,7 @@ const HomePage: React.FC = () => {
                 <img src="/bklogo.png" alt="BK Logo" className="logo" />
 
                 <div className="nav-links">
-                    <a href="#">Home</a>
+                    <Link to="/home">Home</Link>
                     <a href="#">Dashboard</a>
                     <Link to="/book">Book</Link> {/* ✅ working router link */}
                 </div>
@@ -25,8 +27,11 @@ const HomePage: React.FC = () => {
                         onClick={() => setShowChat((prev) => !prev)}
                         style={{ cursor: "pointer" }}
                     />
-                    <FaUserCircle />
-                    <FaChevronDown />
+                    <FaUserCircle
+                        onClick={() => navigate("/profile")}
+                        style={{ cursor: "pointer" }}
+                    />
+
                 </div>
             </nav>
 

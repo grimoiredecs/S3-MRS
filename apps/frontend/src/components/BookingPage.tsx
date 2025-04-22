@@ -60,7 +60,7 @@ const BookingPage: React.FC = () => {
             <nav className="navbar">
                 <img src="/bklogo.png" alt="BK Logo" className="logo" />
                 <div className="nav-links">
-                    <Link to="/">Home</Link>
+                    <Link to="/home">Home</Link>
                     <a href="#">Dashboard</a>
                     <Link to="/book">Book</Link>
                 </div>

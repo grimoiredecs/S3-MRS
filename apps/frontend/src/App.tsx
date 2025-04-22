@@ -3,6 +3,9 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import LoginBox from "./components/LoginBox";
 import HomePage from "./components/HomePage"; // Make sure this is implemented
 import BookingPage from "./components/BookingPage.tsx";
+import ProfilePage from "./components/ProfilePage";
+
+
 import "./App.css";
 
 function App() {
@@ -13,6 +16,8 @@ function App() {
                     <Route path="/" element={<LoginBox />} />
                     <Route path="/home" element={<HomePage />} />
                     <Route path="/book" element={<BookingPage />} />
+                    <Route path="/profile" element={<ProfilePage />} />
+
                 </Routes>
             </div>
         </Router>

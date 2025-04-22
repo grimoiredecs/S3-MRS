@@ -1,20 +1,17 @@
-var express = require('express');
-var path = require('path');
-var cookieParser = require('cookie-parser');
-var logger = require('morgan');
+const express = require("express");
+const mongoose = require("mongoose");
+const bookingRoutes = require("./src/presentation/routes");
+MONGO_URI="mongodb+srv://Cluster76516:WGtse3VmfVZx@cluster76516.zzq9k.mongodb.net/?retryWrites=true&w=majority&appName=Cluster76516"
 
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
-
-var app = express();
-
-app.use(logger('dev'));
+const app = express();
 app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
-app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
+app.use("/api", bookingRoutes);
 
-app.use('/', indexRouter);
-app.use('/users', usersRouter);
-
-module.exports = app;
+mongoose.connect(MONGO_URI)
+    .then(() => {
+        console.log("MongoDB connected");
+        app.listen(3000, () => console.log("Booking Service running on port 3000"));
+    })
+    .catch(err => console.error(err));
+const { startStudentConsumer } = require('src/events/studentConsumer');
+startStudentConsumer();

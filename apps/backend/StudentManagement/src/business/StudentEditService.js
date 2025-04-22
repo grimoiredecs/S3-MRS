@@ -1,34 +1,43 @@
-const StudentRepository = require('../persistence/studentRepository');
-const bcrypt = require('bcrypt');
-const { faker } = require('@faker-js/faker');
+const { StudentRepository } = require('../persistence/studentRepository');
+const { emitEvent } = require('../events/emitEvents');
 
-const StudentEditService = {
-    async createStudent(student) {
-        // If no password is provided, generate a random 5-character one
-        let plainPassword = student.password || faker.internet.password(5, false); // 5 characters
+class StudentEditService {
+    constructor() {
+        this.repo = new StudentRepository();
+    }
 
-        const hashed = await bcrypt.hash(plainPassword, 10);
-        student.password = hashed;
+    async addStudent(student) {
+        const year = this.getYearFromId(student.id);
+        const studentWithYear = { ...student, year };
+        await this.repo.save(studentWithYear);
 
-        await StudentRepository.create(student);
+        // 🔥 Emit event
+        await emitEvent('student-events', 'student-created', studentWithYear);
 
-        return {
-            ...student,
-            password: undefined,         // remove hashed password from response
-            plainPassword: plainPassword // return actual password
-        };
-    },
+        return studentWithYear;
+    }
 
     async updateStudent(id, data) {
-        if (data.password) {
-            data.password = await bcrypt.hash(data.password, 10);
-        }
-        await StudentRepository.update(id, data);
-    },
+        await this.repo.update(id, data);
+        await emitEvent('student-events', 'student-updated', { id, ...data });
+    }
 
     async deleteStudent(id) {
-        await StudentRepository.delete(id);
-    },
-};
+        await this.repo.delete(id);
+        await emitEvent('student-events', 'student-deleted', { id });
+    }
 
-module.exports = StudentEditService;
+    getYearFromId(id) {
+        const prefix = id.substring(0, 3);
+        switch (prefix) {
+            case '245': return '1';
+            case '235': return '2';
+            case '225': return '3';
+            case '215': return '4';
+            case '205': return '4+';
+            default: throw new Error('Invalid student ID prefix');
+        }
+    }
+}
+
+module.exports = { StudentEditService };
