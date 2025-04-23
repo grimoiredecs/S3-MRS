@@ -5,10 +5,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f26fd1aa-31f7-449e-bef2-77149a7551b1" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../Feedback/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Feedback/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Feedback/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Feedback/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Feedback/db.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Feedback/server.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../frontend/src/components/AdminHome.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../frontend/src/components/AdminHome.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../frontend/src/components/Dashboard.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../frontend/src/components/Dashboard.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../frontend/src/components/Reports.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Centralized-Gateway/controllers/authController.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Centralized-Gateway/controllers/authController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Centralized-Gateway/sql/main.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../Centralized-Gateway/sql/main.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../StudentManagement/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../StudentManagement/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../frontend/src/components/BookingPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../frontend/src/components/BookingPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontend/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../frontend/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontend/src/components/AboutUs.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../frontend/src/components/AboutUs.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontend/src/components/Admin.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../frontend/src/components/Admin.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontend/src/components/Admin.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../frontend/src/components/Admin.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontend/src/components/Chatbox.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../frontend/src/components/Chatbox.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontend/src/components/Homepage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../frontend/src/components/Homepage.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../frontend/src/components/LoginBox.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../frontend/src/components/LoginBox.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -78,7 +97,7 @@
       <option name="presentableId" value="Default" />
       <updated>1745259427958</updated>
       <workItem from="1745259429026" duration="22675000" />
-      <workItem from="1745364583575" duration="2890000" />
+      <workItem from="1745364583575" duration="7255000" />
     </task>
     <servers />
   </component>

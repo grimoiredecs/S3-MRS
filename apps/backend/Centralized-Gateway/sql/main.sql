@@ -19,4 +19,15 @@ INSERT INTO users (id, email, password_hash, role) VALUES
 INSERT INTO users (id, email, password_hash, role) VALUES
 ('2252304', 'man@hcmut.edu.vn','123','student')
 
+INSERT INTO users (id, email, password_hash, role) VALUES
+('2852304', 'staff3@hcmut.edu.vn','456','admin')
+
+UPDATE users
+SET password_hash = '$2b$10$X6OaZt2XrE7BLfy3N.q05uY2K0m.PFosCCS3eePv2y3hyv1B1uN5u'
+WHERE email = 'admink@hcmut.edu.vn';
+
+INSERT INTO users (id, email, password_hash, role) VALUES
+('2852344', 'admink@hcmut.edu.vn','$2b$10$1gisxKxoCTND0V5O5jlDzuYFzQw06lptiGXaby3FuAKodbUH.lUnu','admin')
+
+SELECT * FROM users WHERE email = 'student1@hcmut.edu.vn';
 select * from users

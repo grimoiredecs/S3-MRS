@@ -1,17 +1,15 @@
+import axios from "axios";
 import React, { useState, useEffect, useRef } from "react";
 import "./ChatBox.css";
 
-interface Message {
-    sender: "user" | "bot";
-    text: string;
-}
+type Message = string;
 
 const ChatBox: React.FC = () => {
     const [messages, setMessages] = useState<Message[]>([
-        { sender: "bot", text: "Hi! How can I help you?" }
+        "Hi! How can I help you?"
     ]);
-    const [input, setInput] = useState("");
-    const [typing, setTyping] = useState(false);
+    const [input, setInput] = useState<string>("");
+    const [typing, setTyping] = useState<boolean>(false);
     const chatEndRef = useRef<HTMLDivElement | null>(null);
 
     // Scroll to bottom on message
@@ -19,19 +17,24 @@ const ChatBox: React.FC = () => {
         chatEndRef.current?.scrollIntoView({ behavior: "smooth" });
     }, [messages, typing]);
 
-    const handleSend = () => {
+    const handleSend = (): void => {
         if (!input.trim()) return;
 
-        const userMessage = { sender: "user", text: input.trim() };
-        setMessages((prev) => [...prev, userMessage]);
+        setMessages((prev) => [...prev, input]);
+
         setInput("");
         setTyping(true);
 
-        // Simulate bot response
+        axios.post<unknown, unknown>("http://localhost:3020/feedback", {
+            user_id: localStorage.getItem("userId") || "unknown",
+            message: input.trim()
+        }).catch((err: unknown) => console.error("❌ Feedback error:", err));
+
+
         setTimeout(() => {
             setMessages((prev) => [
                 ...prev,
-                { sender: "bot", text: "Okay! I received: " + input.trim() }
+
             ]);
             setTyping(false);
         }, 1000);
@@ -46,8 +49,8 @@ const ChatBox: React.FC = () => {
             <div className="chat-header">Student Support</div>
             <div className="chat-body">
                 {messages.map((msg, idx) => (
-                    <div key={idx} className={`chat-message ${msg.sender}`}>
-                        {msg.text}
+                    <div key={idx} className={`chat-message ${idx % 2 === 0 ? "user" : "bot"}`}>
+                        {msg}
                     </div>
                 ))}
                 {typing && <div className="chat-message bot typing">Typing...</div>}

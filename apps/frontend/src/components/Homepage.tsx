@@ -9,11 +9,25 @@ const HomePage: React.FC = () => {
     const [showChat, setShowChat] = useState(false);
 
     const navigate = useNavigate();
+
+    const handleLogout = () => {
+        localStorage.removeItem("token");
+        localStorage.removeItem("userId");
+        localStorage.removeItem("role");
+        navigate("/");
+    };
+
     return (
         <div className="homepage">
             {/* === Navbar === */}
             <nav className="navbar">
-                <img src="/bklogo.png" alt="BK Logo" className="logo" />
+                <img
+                    src="/bklogo.png"
+                    alt="BK Logo"
+                    className="logo"
+                    onClick={handleLogout}
+                    style={{ cursor: "pointer" }}
+                />
 
                 <div className="nav-links">
                     <Link to="/home">Home</Link>
@@ -42,7 +56,9 @@ const HomePage: React.FC = () => {
                     <p>
                         Smart Study Space Management and Reservation System at HCMUT
                     </p>
-                    <button>More</button>
+                    <Link to="/about">
+                        <button>More</button>
+                    </Link>
                 </div>
             </div>
 
