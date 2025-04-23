@@ -5,8 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f26fd1aa-31f7-449e-bef2-77149a7551b1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../../frontend/src/api/axiosConfig.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Booking/src/business/RoomQuery.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Booking/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Booking/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Booking/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Booking/node_modules/.package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Booking/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Booking/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Booking/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Booking/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Booking/src/presentation/bookingController.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Booking/src/presentation/bookingController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Booking/src/presentation/bookingRoutes.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Booking/src/presentation/bookingRoutes.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/business/queryService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/business/queryService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/persistence/roomRepository.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/persistence/roomRepository.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../StudentManagement/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../StudentManagement/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../frontend/src/components/BookingPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../frontend/src/components/BookingPage.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -25,9 +34,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 6
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
   <component name="ProjectId" id="2w39XC3uq3ClVC1SUEeD1uu5gbu" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -45,6 +54,7 @@
     "git-widget-placeholder": "NtK",
     "javascript.nodejs.core.library.configured.version": "23.5.0",
     "javascript.nodejs.core.library.typings.version": "22.14.1",
+    "last_opened_file_path": "/Users/admin/Github/S3-MRS/apps/backend/RoomManagement",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -75,10 +85,16 @@
       <option name="presentableId" value="Default" />
       <updated>1745259427958</updated>
       <workItem from="1745259429026" duration="22675000" />
+      <workItem from="1745364583575" duration="1313000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="dependencySupport" implementationName="javascript:npm:kafkajs" />
+    <option featureType="dependencySupport" implementationName="executable:docker" />
+    <option featureType="dependencySupport" implementationName="executable:kubectl" />
   </component>
 </project>

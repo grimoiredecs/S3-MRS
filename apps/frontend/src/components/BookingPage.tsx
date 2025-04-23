@@ -1,5 +1,4 @@
-
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useUserContext } from "../context/UserContext";
 import { Link } from "react-router-dom";
 import axios from "axios";
@@ -18,7 +17,6 @@ export interface Booking {
     updatedAt: string;
 }
 
-const rooms = ["303-A4", "501-A4", "101-A4", "202-B1", "405-C5", "601-B4", "102-C6"];
 const durations = ["30 minutes", "45 minutes", "1 hour", "2 hours"];
 const seats = [1, 2, 3, 4, 5];
 
@@ -32,6 +30,7 @@ for (let hour = 7; hour <= 18; hour++) {
 
 const BookingPage: React.FC = () => {
     const { userId } = useUserContext();
+    const [rooms, setRooms] = useState<any[]>([]);
     const [room, setRoom] = useState("");
     const [date, setDate] = useState("");
     const [startTime, setStartTime] = useState("");
@@ -39,6 +38,19 @@ const BookingPage: React.FC = () => {
     const [userNumber, setUserNumber] = useState("");
     const [booked, setBooked] = useState(false);
     const [error, setError] = useState("");
+
+    useEffect(() => {
+        const fetchRooms = async () => {
+            try {
+                const response = await axios.get("http://localhost:3003/rooms");
+                console.log("Fetched rooms:", response.data);
+                setRooms(response.data);
+            } catch (error) {
+                console.error("Error fetching rooms:", error);
+            }
+        };
+        fetchRooms();
+    }, []);
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
@@ -105,7 +117,9 @@ const BookingPage: React.FC = () => {
                         <select value={room} onChange={(e) => setRoom(e.target.value)} required>
                             <option value="">-- Choose a room --</option>
                             {rooms.map((r) => (
-                                <option key={r} value={r}>{r}</option>
+                                <option key={r.room_id} value={r.room_id}>
+                                    {r.room_id} (Capacity: {r.capacity})
+                                </option>
                             ))}
                         </select>
 

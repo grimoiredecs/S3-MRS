@@ -1,4 +1,5 @@
 
+const RoomQueryService = require('../business/RoomQuery');
 const BookingQueryService = require('../business/BookingQueryService');
 const BookingCommandService = require('../business/BookingEditService');
 
@@ -35,6 +36,25 @@ const BookingController = {
         try {
             const result = await BookingCommandService.delete(req.params.id);
             res.json(result);
+        } catch (err) {
+            res.status(500).json({ error: err.message });
+        }
+    },
+
+    async getAllRooms(req, res) {
+        try {
+            const rooms = await RoomQueryService.getAllRooms();
+            res.json(rooms);
+        } catch (err) {
+            res.status(500).json({ error: err.message });
+        }
+    },
+
+    async getRoomById(req, res) {
+        try {
+            const room = await RoomQueryService.getRoomById(req.params.id);
+            if (!room) return res.status(404).json({ message: 'Room not found' });
+            res.json(room);
         } catch (err) {
             res.status(500).json({ error: err.message });
         }

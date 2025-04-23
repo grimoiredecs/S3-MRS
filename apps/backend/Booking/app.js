@@ -4,12 +4,19 @@ const bookingRoutes = require('./src/presentation/bookingRoutes');
 
 const connectMongo = require('./src/database/mongo');
 connectMongo(); // ✅ ensure this runs before anything else
+const cors = require("cors");
+app.use(cors());
 app.use(express.json());
 
 // ✅ Health check route
 app.get('/', (req, res) => {
   res.send('🚀 Booking API is running fine!');
 });
+
+// ✅ Room API routes from BookingController
+const BookingController = require('./src/presentation/bookingController');
+app.get('/rooms', BookingController.getAllRooms);
+app.get('/rooms/:id', BookingController.getRoomById);
 
 // ✅ Booking API routes
 app.use('/bookings', bookingRoutes);

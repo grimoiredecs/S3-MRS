@@ -46,11 +46,6 @@ const getRoomEquipments = async (room_id) => {
     return room.equipments;
 };
 
-const checkPrivateSpace = async (room_id) => {
-    const room = await ensureRoom(room_id);
-    return room.has_private_space;
-};
-
 const checkSeatAvailable = async (room_id) => {
     const room = await ensureRoom(room_id);
     return room.seat_remaining > 0;
@@ -70,7 +65,6 @@ module.exports = {
     getRoomAvailability,
     getRoomCapacity,
     getRoomEquipments,
-    checkPrivateSpace,
     checkSeatAvailable,
     getRoomsByEquipment,
     checkAvailableEquipment

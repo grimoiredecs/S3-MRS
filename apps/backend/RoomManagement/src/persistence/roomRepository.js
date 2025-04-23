@@ -17,9 +17,9 @@ const save = async (room) => {
         } = room;
 
         await client.query(
-            `INSERT INTO rooms (room_id, capacity, status, has_private_space, condition, seat_remaining)
+            `INSERT INTO rooms (room_id, capacity, status,  condition, seat_remaining)
              VALUES ($1, $2, $3, $4, $5, $6)`,
-            [room_id, capacity, status, has_private_space, condition, seat_remaining]
+            [room_id, capacity, status,condition, seat_remaining]
         );
 
         await client.query(

@@ -5,24 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e959cca6-4b50-4453-9576-0abfd7f7ad17" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../../frontend/src/api/axiosConfig.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../frontend/src/context/UserContext.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Booking/src/business/RoomQuery.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Booking/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Booking/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Booking/src/database/mongo.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Booking/src/database/mongo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Booking/src/test/testBooking.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Booking/src/test/testBooking.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Booking/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Booking/node_modules/.package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Booking/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Booking/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Booking/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Booking/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Booking/src/presentation/bookingController.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Booking/src/presentation/bookingController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Booking/src/presentation/bookingRoutes.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Booking/src/presentation/bookingRoutes.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../RoomManagement/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../RoomManagement/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RoomManagement/src/business/queryService.js" beforeDir="false" afterPath="$PROJECT_DIR$/../RoomManagement/src/business/queryService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RoomManagement/src/persistence/roomRepository.js" beforeDir="false" afterPath="$PROJECT_DIR$/../RoomManagement/src/persistence/roomRepository.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/business/AuthenticationService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/business/AuthenticationService.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/business/StudentEditService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/business/StudentEditService.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/business/StudentQueryService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/business/StudentQueryService.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/persistence/studentRepository.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/persistence/studentRepository.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/presentation/controllers/studentController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/presentation/controllers/studentController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/presentation/routes/studentRoutes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/presentation/routes/studentRoutes.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../frontend/src/components/BookingPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../frontend/src/components/BookingPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../frontend/src/components/Homepage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../frontend/src/components/Homepage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../frontend/src/components/LoginBox.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../frontend/src/components/LoginBox.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../frontend/src/main.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../frontend/src/main.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,30 +45,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "Node.js.app.js.executor": "Run",
-    "Node.js.bin/www.executor": "Run",
-    "Node.js.studentRoutes.js.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "NtK",
-    "javascript.nodejs.core.library.configured.version": "23.5.0",
-    "javascript.nodejs.core.library.typings.version": "22.14.1",
-    "last_opened_file_path": "/Users/admin/Github/S3-MRS/apps/backend/StudentManagement",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_interpreter_path": "node",
-    "nodejs_package_manager_path": "npm",
-    "ts.external.directory.path": "/Applications/WebStorm.app/Contents/plugins/javascript-plugin/jsLanguageServicesImpl/external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Node.js.app.js.executor&quot;: &quot;Run&quot;,
+    &quot;Node.js.bin/www.executor&quot;: &quot;Run&quot;,
+    &quot;Node.js.studentRoutes.js.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;NtK&quot;,
+    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;23.5.0&quot;,
+    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;22.14.1&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/admin/Github/S3-MRS/apps/backend/StudentManagement&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_interpreter_path&quot;: &quot;node&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Applications/WebStorm.app/Contents/plugins/javascript-plugin/jsLanguageServicesImpl/external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/" />
@@ -96,6 +90,7 @@
       <updated>1745256807362</updated>
       <workItem from="1745256808423" duration="21676000" />
       <workItem from="1745356571248" duration="3667000" />
+      <workItem from="1745364501289" duration="1960000" />
     </task>
     <servers />
   </component>
