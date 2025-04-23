@@ -29,7 +29,7 @@ for (let hour = 7; hour <= 18; hour++) {
 }
 
 const BookingPage: React.FC = () => {
-    const { userId } = useUserContext();
+    const userId = localStorage.getItem("userId");
     const [rooms, setRooms] = useState<any[]>([]);
     const [room, setRoom] = useState("");
     const [date, setDate] = useState("");
@@ -81,10 +81,17 @@ const BookingPage: React.FC = () => {
             userNumber: Number(userNumber)
         };
 
-        {
+        try {
+            console.log("📦 Sending booking payload:", bookingPayload);
             const res = await axios.post("http://localhost:3003/bookings", bookingPayload);
             console.log("✅ Booking confirmed:", res.data);
             setBooked(true);
+        } catch (err: any) {
+            if (axios.isAxiosError(err)) {
+                setError(`❌ Booking failed: ${err.response?.data?.error || err.message}`);
+            } else {
+                setError("❌ Booking failed due to an unexpected error.");
+            }
         }
     };
 
@@ -118,7 +125,7 @@ const BookingPage: React.FC = () => {
                             <option value="">-- Choose a room --</option>
                             {rooms.map((r) => (
                                 <option key={r.room_id} value={r.room_id}>
-                                    {r.room_id} (Capacity: {r.capacity})
+                                    {r.room_id} (Seats left: {r.seat_remaining})
                                 </option>
                             ))}
                         </select>

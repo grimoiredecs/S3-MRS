@@ -23,15 +23,17 @@ const LoginBox: FC = () => {
                 password: password,
             });
 
+            console.log("Response from login:", response.data);
             const token = response.data.token;
             if (!token) throw new Error("No token returned");
 
             localStorage.setItem("token", token);
+            // Adjust the key if userId is under a different key, e.g., response.data.userId or response.data.user.id
             const userId = response.data.id;
             setUserId(userId);
 
             console.log("✅ Logged in as:", userId);
-            localStorage.setItem("id", userId);
+            localStorage.setItem("userId", userId);
             console.log("✅ Logged in. Token:", token);
             navigate("/home");
         } catch (err: any) {

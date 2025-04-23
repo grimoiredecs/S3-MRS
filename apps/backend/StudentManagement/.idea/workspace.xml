@@ -5,18 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e959cca6-4b50-4453-9576-0abfd7f7ad17" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../Booking/src/business/RoomQuery.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Booking/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Booking/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Booking/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Booking/node_modules/.package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Booking/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Booking/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Booking/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Booking/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Booking/src/presentation/bookingController.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Booking/src/presentation/bookingController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Booking/src/presentation/bookingRoutes.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Booking/src/presentation/bookingRoutes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Centralized-Gateway/controllers/authController.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Centralized-Gateway/controllers/authController.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../RoomManagement/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../RoomManagement/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../RoomManagement/src/business/queryService.js" beforeDir="false" afterPath="$PROJECT_DIR$/../RoomManagement/src/business/queryService.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../RoomManagement/src/persistence/roomRepository.js" beforeDir="false" afterPath="$PROJECT_DIR$/../RoomManagement/src/persistence/roomRepository.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../frontend/src/components/BookingPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../frontend/src/components/BookingPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontend/src/components/LoginBox.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../frontend/src/components/LoginBox.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +83,7 @@
       <updated>1745256807362</updated>
       <workItem from="1745256808423" duration="21676000" />
       <workItem from="1745356571248" duration="3667000" />
-      <workItem from="1745364501289" duration="1960000" />
+      <workItem from="1745364501289" duration="3571000" />
     </task>
     <servers />
   </component>
