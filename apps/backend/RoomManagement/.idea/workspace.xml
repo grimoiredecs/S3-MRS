@@ -5,30 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f26fd1aa-31f7-449e-bef2-77149a7551b1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../Feedback/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Feedback/.idea/jsLibraryMappings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Feedback/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Feedback/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Feedback/db.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Feedback/server.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../frontend/src/components/AdminHome.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../frontend/src/components/AdminHome.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../frontend/src/components/Dashboard.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../frontend/src/components/Dashboard.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../frontend/src/components/Reports.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Centralized-Gateway/controllers/authController.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Centralized-Gateway/controllers/authController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Centralized-Gateway/sql/main.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../Centralized-Gateway/sql/main.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Booking/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Booking/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../StudentManagement/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../StudentManagement/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../frontend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../frontend/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../frontend/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../frontend/src/components/AboutUs.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../frontend/src/components/AboutUs.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../frontend/src/components/Admin.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../frontend/src/components/Admin.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../frontend/src/components/Admin.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../frontend/src/components/Admin.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../frontend/src/components/Chatbox.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../frontend/src/components/Chatbox.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../frontend/src/components/Homepage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../frontend/src/components/Homepage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../frontend/src/components/LoginBox.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../frontend/src/components/LoginBox.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,26 +36,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "NtK",
-    "javascript.nodejs.core.library.configured.version": "23.5.0",
-    "javascript.nodejs.core.library.typings.version": "22.14.1",
-    "last_opened_file_path": "/Users/admin/Github/S3-MRS/apps/backend/RoomManagement",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_interpreter_path": "node",
-    "nodejs_package_manager_path": "npm",
-    "ts.external.directory.path": "/Applications/WebStorm.app/Contents/plugins/javascript-plugin/jsLanguageServicesImpl/external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;NtK&quot;,
+    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;23.5.0&quot;,
+    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;22.14.1&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/admin/Github/S3-MRS/apps/backend/RoomManagement&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_interpreter_path&quot;: &quot;node&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Applications/WebStorm.app/Contents/plugins/javascript-plugin/jsLanguageServicesImpl/external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/database" />
@@ -97,7 +76,8 @@
       <option name="presentableId" value="Default" />
       <updated>1745259427958</updated>
       <workItem from="1745259429026" duration="22675000" />
-      <workItem from="1745364583575" duration="7255000" />
+      <workItem from="1745364583575" duration="8045000" />
+      <workItem from="1745422461919" duration="1000" />
     </task>
     <servers />
   </component>
