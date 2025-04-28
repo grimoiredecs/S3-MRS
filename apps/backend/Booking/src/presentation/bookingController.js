@@ -57,6 +57,15 @@ const BookingController = {
         } catch (err) {
             res.status(500).json({ error: err.message });
         }
+    },
+
+    async getAllBookings(req, res) {
+        try {
+            const bookings = await BookingQueryService.getAll();
+            res.json(bookings);
+        } catch (err) {
+            res.status(500).json({ error: err.message });
+        }
     }
 };
 

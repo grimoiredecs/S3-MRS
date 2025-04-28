@@ -7,6 +7,10 @@ const BookingQueryService = {
 
     async getByUser(userId) {
         return await BookingRepo.getBookingsByUser(userId);
+    },
+
+    async getAll() {
+        return await BookingRepo.getAllBookings();
     }
 };
 

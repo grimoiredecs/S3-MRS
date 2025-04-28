@@ -91,5 +91,6 @@ module.exports = {
     createBooking,
     getBookingById: async (id) => await Booking.findById(id),
     getBookingsByUser: async (userId) => await Booking.find({ userId }),
-    deleteBooking: async (id) => await Booking.findByIdAndDelete(id)
+    deleteBooking: async (id) => await Booking.findByIdAndDelete(id),
+    getAllBookings: async () => await Booking.find()
 };

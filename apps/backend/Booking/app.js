@@ -19,8 +19,9 @@ app.get('/rooms', BookingController.getAllRooms);
 app.get('/rooms/:id', BookingController.getRoomById);
 
 // ✅ Booking API routes
-app.use('/bookings', bookingRoutes);
+//app.use('/bookings', bookingRoutes);
 
+app.use('/bookings', bookingRoutes); // ✅ GOOD
 // ✅ 404 handler
 app.use((req, res) => {
   res.status(404).json({ error: 'Not Found' });

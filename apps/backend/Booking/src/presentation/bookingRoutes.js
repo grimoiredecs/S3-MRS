@@ -8,6 +8,8 @@ router.get('/:id', BookingController.getById);
 // GET all bookings by user ID
 router.get('/user/:userId', BookingController.getByUser);
 
+router.get('/', BookingController.getAllBookings); // ✅ this matches GET /bookings
+
 // GET all rooms
 router.get('/rooms', BookingController.getAllRooms);
 
