@@ -27,7 +27,7 @@ app.use((req, res) => {
 });
 
 // ✅ Start server
-const PORT = process.env.PORT || 3045;
+const PORT = process.env.PORT || 3003;
 app.listen(PORT, () => {
   console.log(`🚀 Booking Service running at http://localhost:${PORT}`);
 });

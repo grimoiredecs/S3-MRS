@@ -1,4 +1,3 @@
-
 const RoomQueryService = require('../business/RoomQuery');
 const BookingQueryService = require('../business/BookingQueryService');
 const BookingCommandService = require('../business/BookingEditService');

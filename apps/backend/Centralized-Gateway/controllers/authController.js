@@ -18,8 +18,7 @@ exports.login = async (req, res) => {
         res.json({
             token,
             id: user.id,
-            role: user.role, // ✅ Make sure user object includes `role`
-
+            role: user.role,
         });
 
     } catch (err) {

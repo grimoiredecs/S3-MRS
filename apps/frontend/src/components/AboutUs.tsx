@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { FaBell, FaComments, FaUserCircle, FaChevronDown } from "react-icons/fa";
 import ChatBox from "./ChatBox"; // <-- import
 import "./HomePage.css";
+import {Link} from "react-router-dom";
 
 const HomePage: React.FC = () => {
     const [showChat, setShowChat] = useState(false);
@@ -11,9 +12,9 @@ const HomePage: React.FC = () => {
             <nav className="navbar">
                 <img src="/bklogo.png" alt="BK Logo" className="logo" />
                 <div className="nav-links">
-                    <a href="#">Home</a>
-                    <a href="#">Dashboard</a>
-                    <a href="#">Book</a>
+                    <Link to="/home">Home</Link>
+                    <Link to = "/Dashboard">Dashboard</Link>
+                    <Link to="/book">Book</Link>
                 </div>
                 <div className="nav-icons">
                     <FaBell />

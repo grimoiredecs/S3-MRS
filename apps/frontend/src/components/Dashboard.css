@@ -5,6 +5,170 @@
     align-items: center;
 }
 
+.dashboard-content {
+    background-color: rgba(255, 255, 255, 0.85); /* semi-transparent white */
+    padding: 20px;
+    margin: 50px auto;
+    width: 80%;
+    max-width: 800px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: left;
+}
+
+.homepage {
+    height: 100vh;
+    width: 100vw;
+    background: url('/background.jpeg') no-repeat center center / cover;
+    font-family: sans-serif;
+    color: #222;
+    display: flex;
+    flex-direction: column;
+}
+
+/* === NAVBAR === */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1e0aff;
+    padding: 10px 30px;
+    position: relative;
+}
+
+.logo {
+    width: 50px;
+    height: auto;
+}
+
+/* ✅ center links */
+.nav-links {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.nav-icons {
+    display: flex;
+    gap: 15px;
+    font-size: 18px;
+    color: white;
+}
+
+/* === HERO SECTION === */
+.hero {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-box {
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    max-width: 500px;
+    width: 100%;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.hero-box h1 {
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 16px;
+    color: #111;
+}
+
+.hero-box p {
+    font-size: 16px;
+    margin-bottom: 24px;
+    color: #444;
+}
+
+.hero-box button {
+    background-color: #1e90ff;
+    border: none;
+    padding: 12px 24px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.hero-box button:hover {
+    background-color: #1c86ee;
+}
+/* === CHAT BOX === */
+.chat-box {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 280px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    z-index: 999;
+}
+
+.chat-header {
+    background: #1e90ff;
+    color: white;
+    padding: 12px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.chat-body {
+    padding: 10px;
+    height: 180px;
+    overflow-y: auto;
+    font-size: 14px;
+}
+
+.chat-message {
+    margin-bottom: 10px;
+}
+
+.chat-message.bot {
+    color: #1e90ff;
+}
+
+.chat-input {
+    display: flex;
+    border-top: 1px solid #eee;
+}
+
+.chat-input input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    font-size: 14px;
+    outline: none;
+}
+
+.chat-input button {
+    padding: 0 16px;
+    background: #1e90ff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
 .profile-box {
     background: white;
     padding: 30px;

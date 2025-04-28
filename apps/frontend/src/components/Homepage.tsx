@@ -31,7 +31,7 @@ const HomePage: React.FC = () => {
 
                 <div className="nav-links">
                     <Link to="/home">Home</Link>
-                    <a href="#">Dashboard</a>
+                    <Link to = "/Dashboard"> Dashboard</Link>
                     <Link to="/book">Book</Link> {/* ✅ working router link */}
                 </div>
 

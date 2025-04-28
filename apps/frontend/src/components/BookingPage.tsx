@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { useUserContext } from "../context/UserContext";
-import { Link } from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 import axios from "axios";
 import "./BookingPage.css";
 import "./LoginBox"
+
+const navigate = useNavigate();
 
 // types/Booking.ts
 export interface Booking {
@@ -27,6 +29,13 @@ for (let hour = 7; hour <= 18; hour++) {
         times.push(`${hour.toString().padStart(2, "0")}:${min.toString().padStart(2, "0")}`);
     }
 }
+const handleLogout = () => {
+    localStorage.removeItem("token");
+    localStorage.removeItem("userId");
+    localStorage.removeItem("role");
+    navigate("/");
+};
+
 
 const BookingPage: React.FC = () => {
     const userId = localStorage.getItem("userId");
@@ -110,7 +119,7 @@ const BookingPage: React.FC = () => {
                 <img src="/bklogo.png" alt="BK Logo" className="logo" />
                 <div className="nav-links">
                     <Link to="/home">Home</Link>
-                    <a href="#">Dashboard</a>
+                    <Link to = "/Dashboard">Dashboard</Link>
                     <Link to="/book">Book</Link>
                 </div>
             </nav>
@@ -119,16 +128,6 @@ const BookingPage: React.FC = () => {
                 {!booked ? (
                     <form className="booking-form" onSubmit={handleSubmit}>
                         <h2>Book a Study Room</h2>
-
-                        <label>Select Room</label>
-                        <select value={room} onChange={(e) => setRoom(e.target.value)} required>
-                            <option value="">-- Choose a room --</option>
-                            {rooms.map((r) => (
-                                <option key={r.room_id} value={r.room_id}>
-                                    {r.room_id} (Seats left: {r.seat_remaining})
-                                </option>
-                            ))}
-                        </select>
 
                         <label>Select Date</label>
                         <input
@@ -145,6 +144,16 @@ const BookingPage: React.FC = () => {
                             <option value="">-- Choose a time --</option>
                             {times.map((time) => (
                                 <option key={time} value={time}>{time}</option>
+                            ))}
+                        </select>
+
+                        <label>Select Room</label>
+                        <select value={room} onChange={(e) => setRoom(e.target.value)} required>
+                            <option value="">-- Choose a room --</option>
+                            {rooms.map((r) => (
+                                <option key={r.room_id} value={r.room_id}>
+                                    {r.room_id} (Seats left: {r.seat_remaining})
+                                </option>
                             ))}
                         </select>
 
