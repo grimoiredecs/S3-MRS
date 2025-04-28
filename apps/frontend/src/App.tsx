@@ -1,13 +1,13 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import LoginBox from "./components/LoginBox";
-import HomePage from "./components/HomePage"; // Make sure this is implemented
 import BookingPage from "./components/BookingPage.tsx";
 import ProfilePage from "./components/ProfilePage";
 import AboutPage from "./components/AboutUs.tsx";
 import ReportPage from "./components/Reports.tsx"
 import AdminHome from "./components/AdminHome.tsx";
 
+import HomePage from "./components/HomePage";
 import "./App.css";
 import Dashboard from "./components/Dashboard.tsx";
 

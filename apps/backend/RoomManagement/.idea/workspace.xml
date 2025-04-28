@@ -5,21 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f26fd1aa-31f7-449e-bef2-77149a7551b1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../Booking/src/business/test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Booking/src/persistence/test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Booking/src/test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../frontend/src/components/AdminDashboard.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../frontend/src/components/AdminDashboard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Booking/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Booking/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Booking/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Booking/node_modules/.package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Booking/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Booking/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Booking/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Booking/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Booking/src/business/BookingQueryService.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Booking/src/business/BookingQueryService.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Booking/src/persistence/bookingRepository.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Booking/src/persistence/bookingRepository.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Booking/src/presentation/bookingController.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Booking/src/presentation/bookingController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Booking/src/presentation/bookingRoutes.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Booking/src/presentation/bookingRoutes.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../StudentManagement/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../StudentManagement/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontend/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../frontend/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontend/src/components/AdminDashboard.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontend/src/components/AdminDashboard.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontend/src/components/AdminHome.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../frontend/src/components/AdminHome.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontend/src/components/BookingPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../frontend/src/components/BookingPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontend/src/components/ProfilePage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../frontend/src/components/ProfilePage.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +83,7 @@
       <workItem from="1745259429026" duration="22675000" />
       <workItem from="1745364583575" duration="8045000" />
       <workItem from="1745422461919" duration="1000" />
-      <workItem from="1745812651833" duration="1544000" />
+      <workItem from="1745812651833" duration="2747000" />
     </task>
     <servers />
   </component>

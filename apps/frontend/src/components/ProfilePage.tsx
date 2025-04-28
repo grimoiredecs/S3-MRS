@@ -11,11 +11,7 @@ const studentInfo = {
     year: "3rd year",
 };
 
-const bookingHistory = [
-    { room: "303-A4", date: "2025-04-25", time: "10:00", duration: "1 hour" },
-    { room: "501-A4", date: "2025-04-22", time: "08:30", duration: "2 hours" },
-    { room: "202-B1", date: "2025-04-20", time: "15:45", duration: "45 minutes" },
-];
+
 
 const ProfilePage: React.FC = () => {
     return (
@@ -44,29 +40,7 @@ const ProfilePage: React.FC = () => {
                     <p><strong>Year:</strong> {studentInfo.year}</p>
                 </div>
 
-                <div className="booking-history">
-                    <h3>Booking History</h3>
-                    <table>
-                        <thead>
-                        <tr>
-                            <th>Room</th>
-                            <th>Date</th>
-                            <th>Time</th>
-                            <th>Duration</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        {bookingHistory.map((booking, idx) => (
-                            <tr key={idx}>
-                                <td>{booking.room}</td>
-                                <td>{booking.date}</td>
-                                <td>{booking.time}</td>
-                                <td>{booking.duration}</td>
-                            </tr>
-                        ))}
-                        </tbody>
-                    </table>
-                </div>
+
             </div>
         </div>
     );

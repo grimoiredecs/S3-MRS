@@ -15,8 +15,8 @@ const AdminHome: React.FC = () => {
 
                 <div className="nav-links">
                     <Link to="/admin">Home</Link>
-                    <Link to="/dashboard" > Dashboard</Link>
-                    <Link to="/report">Reports</Link> {/* ✅ working router link */}
+                    <Link to="/admindash" > Dashboard</Link>
+
                 </div>
 
                 <div className="nav-icons">

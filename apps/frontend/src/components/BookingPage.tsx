@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { useUserContext } from "../context/UserContext";
-import {Link, useNavigate} from "react-router-dom";
+import {Link} from "react-router-dom";
 import axios from "axios";
 import "./BookingPage.css";
 import "./LoginBox"
 
-const navigate = useNavigate();
 
 // types/Booking.ts
 export interface Booking {
@@ -29,13 +28,6 @@ for (let hour = 7; hour <= 18; hour++) {
         times.push(`${hour.toString().padStart(2, "0")}:${min.toString().padStart(2, "0")}`);
     }
 }
-const handleLogout = () => {
-    localStorage.removeItem("token");
-    localStorage.removeItem("userId");
-    localStorage.removeItem("role");
-    navigate("/");
-};
-
 
 const BookingPage: React.FC = () => {
     const userId = localStorage.getItem("userId");
