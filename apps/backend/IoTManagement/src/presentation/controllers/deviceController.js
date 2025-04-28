@@ -1,34 +1,42 @@
-const QueryService = require('../../business/DeviceQueryService');
-const EditService = require('../../business/DeviceEditService');
+const DeviceService = require('../../business/deviceService');
 
-module.exports = {
-    getAllDevices: async (req, res) => {
-        const devices = await QueryService.getAllDevices();
-        res.json(devices);
+const DeviceController = {
+    async getAll(req, res) {
+        try {
+            const devices = await DeviceService.getAllDevices();
+            res.json(devices);
+        } catch (err) {
+            res.status(500).json({ error: err.message });
+        }
     },
-    getDeviceById: async (req, res) => {
-        const device = await QueryService.getDeviceById(req.params.id);
-        device ? res.json(device) : res.status(404).json({ error: 'Device not found' });
+
+    async getById(req, res) {
+        try {
+            const device = await DeviceService.getDeviceById(req.params.id);
+            if (!device) return res.status(404).json({ error: 'Device not found' });
+            res.json(device);
+        } catch (err) {
+            res.status(500).json({ error: err.message });
+        }
     },
-    createDevice: async (req, res) => {
-        const device = await EditService.createDevice(req.body);
-        res.status(201).json(device);
+
+    async turnOn(req, res) {
+        try {
+            const updated = await DeviceService.turnOn(req.params.id);
+            res.json(updated);
+        } catch (err) {
+            res.status(500).json({ error: err.message });
+        }
     },
-    updateDeviceStatus: async (req, res) => {
-        const device = await EditService.updateDeviceStatus(req.params.id, req.body.status);
-        res.json(device);
-    },
-    deleteDevice: async (req, res) => {
-        await EditService.deleteDevice(req.params.id);
-        res.status(204).send();
-    },
-    reportIssue: async (req, res) => {
-        const { device_id, timestamp, issue_description } = req.body;
-        const issue = await EditService.reportIssue(device_id, timestamp, issue_description);
-        res.status(201).json(issue);
-    },
-    getIssues: async (req, res) => {
-        const issues = await QueryService.getDeviceIssues(req.params.id);
-        res.json(issues);
+
+    async turnOff(req, res) {
+        try {
+            const updated = await DeviceService.turnOff(req.params.id);
+            res.json(updated);
+        } catch (err) {
+            res.status(500).json({ error: err.message });
+        }
     }
 };
+
+module.exports = DeviceController;

@@ -1,18 +1,17 @@
 import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { FaBell, FaUserCircle } from "react-icons/fa";
-import "./Dashboard.css"; // Reuse your dashboard styling
+import "./Dashboard.css"; // Reuse your dashboard CSS
 
-const IoTManagement: React.FC = () => {
-    const [devices, setDevices] = useState([]);
+const AdminDashboard: React.FC = () => {
+    const [bookings, setBookings] = useState([]);
     const navigate = useNavigate();
-
     useEffect(() => {
-        fetch("http://localhost:3004/devices") // Assuming you mount IoT service on port 3004
+        fetch("http://localhost:3003/bookings")
             .then((res) => res.json())
-            .then((data) => setDevices(data))
+            .then((data) => setBookings(data))
             .catch((err) => {
-                console.error("❌ Failed to fetch IoT devices:", err);
+                console.error("❌ Failed to fetch bookings:", err);
             });
     }, []);
 
@@ -25,7 +24,6 @@ const IoTManagement: React.FC = () => {
                 <div className="nav-links">
                     <Link to="/admin">Home</Link>
                     <Link to="/admindashboard">Dashboard</Link>
-                    <Link to="/iot">IoT Management</Link>
                     <Link to="/report">Reports</Link>
                 </div>
 
@@ -38,27 +36,25 @@ const IoTManagement: React.FC = () => {
                 </div>
             </nav>
 
-            {/* === IoT Device Content === */}
+            {/* === Admin Dashboard Content === */}
             <div className="admin-dashboard-content">
-                <h2>IoT Device Management</h2>
+                <h2>All Students' Bookings</h2>
                 <table>
                     <thead>
                     <tr>
-                        <th>Device ID</th>
-                        <th>Device Type</th>
-                        <th>Room ID</th>
-                        <th>Status</th>
-                        <th>Online</th>
+                        <th>Student ID</th>
+                        <th>Room</th>
+                        <th>Start Time</th>
+                        <th>End Time</th>
                     </tr>
                     </thead>
                     <tbody>
-                    {devices.map((device: any, index: number) => (
+                    {bookings.map((booking: any, index: number) => (
                         <tr key={index}>
-                            <td>{device.deviceId}</td>
-                            <td>{device.deviceType}</td>
-                            <td>{device.roomId}</td>
-                            <td>{device.status ? "On" : "Off"}</td>
-                            <td>{device.online ? "Online" : "Offline"}</td>
+                            <td>{booking.userId}</td>
+                            <td>{booking.roomId}</td>
+                            <td>{new Date(booking.startTime).toLocaleString()}</td>
+                            <td>{new Date(booking.endTime).toLocaleString()}</td>
                         </tr>
                     ))}
                     </tbody>
@@ -68,4 +64,4 @@ const IoTManagement: React.FC = () => {
     );
 };
 
-export default IoTManagement;
+export default AdminDashboard;

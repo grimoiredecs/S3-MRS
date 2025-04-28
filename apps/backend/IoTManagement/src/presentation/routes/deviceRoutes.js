@@ -1,15 +1,11 @@
 const express = require('express');
 const router = express.Router();
-const Controller = require('../controllers/deviceController');
+const DeviceController = require('../controllers/DeviceController');
 
-router.get('/', Controller.getAllDevices);
-router.get('/:id', Controller.getDeviceById);
-router.post('/', Controller.createDevice);
-router.put('/:id/status', Controller.updateDeviceStatus);
-router.delete('/:id', Controller.deleteDevice);
-
-// Issues
-router.post('/issue', Controller.reportIssue);
-router.get('/:id/issues', Controller.getIssues);
+// API Routes
+router.get('/', DeviceController.getAll);
+router.get('/:id', DeviceController.getById);
+router.put('/:id/on', DeviceController.turnOn);
+router.put('/:id/off', DeviceController.turnOff);
 
 module.exports = router;

@@ -8,6 +8,7 @@ import ReportPage from "./components/Reports.tsx"
 import AdminHome from "./components/AdminHome.tsx";
 
 import HomePage from "./components/HomePage";
+import AdminDashboard from "./components/AdminDashboard.tsx";
 import "./App.css";
 import Dashboard from "./components/Dashboard.tsx";
 
@@ -24,6 +25,7 @@ function App() {
                     <Route path="/admin" element={<AdminHome />} />
                     <Route path="/report" element={<ReportPage />} />
                     <Route path = "/dashboard" element={<Dashboard/>}/>
+                    <Route path = "/admindash" element={<AdminDashboard/>}/>
                 </Routes>
             </div>
         </Router>
