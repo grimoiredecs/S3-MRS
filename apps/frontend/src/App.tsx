@@ -12,6 +12,7 @@ import AdminDashboard from "./components/AdminDashboard.tsx";
 import "./App.css";
 import Dashboard from "./components/Dashboard.tsx";
 import IoTManagement from "./components/IoT.tsx";
+import AdminProfile from "./components/AdminProfile.tsx";
 
 function App() {
     return (
@@ -28,6 +29,7 @@ function App() {
                     <Route path = "/dashboard" element={<Dashboard/>}/>
                     <Route path = "/admindash" element={<AdminDashboard/>}/>
                     <Route path = "/IoTManagement" element={<IoTManagement/>}/>
+                    <Route path = "/AdminProfile" element={<AdminProfile/>}/>
                 </Routes>
             </div>
         </Router>

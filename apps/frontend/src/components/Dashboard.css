@@ -5,6 +5,27 @@
     align-items: center;
 }
 
+.table-container {
+    max-height: 400px;
+    overflow-y: auto;
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead th {
+    background-color: #f0f0f0;
+    padding: 12px;
+}
+
+tbody td {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+}
 .dashboard-content {
     background-color: rgba(255, 255, 255, 0.85); /* semi-transparent white */
     padding: 20px;

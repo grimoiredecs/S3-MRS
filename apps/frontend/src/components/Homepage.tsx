@@ -56,9 +56,7 @@ const HomePage: React.FC = () => {
                     <p>
                         Smart Study Space Management and Reservation System at HCMUT
                     </p>
-                    <Link to="/about">
-                        <button>More</button>
-                    </Link>
+
                 </div>
             </div>
 

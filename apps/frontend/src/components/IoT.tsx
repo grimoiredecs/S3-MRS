@@ -3,12 +3,19 @@ import { Link, useNavigate } from "react-router-dom";
 import { FaBell, FaUserCircle } from "react-icons/fa";
 import "./Dashboard.css"; // Reuse your dashboard styling
 
+interface Device {
+    id: string;
+    type: string;
+    room_id: string;
+    status: boolean;
+}
+
 const IoTManagement: React.FC = () => {
-    const [devices, setDevices] = useState([]);
+    const [devices, setDevices] = useState<Device[]>([]);
     const navigate = useNavigate();
 
     useEffect(() => {
-        fetch("http://localhost:3004/devices") // Assuming you mount IoT service on port 3004
+        fetch("http://localhost:3004/devices")
             .then((res) => res.json())
             .then((data) => setDevices(data))
             .catch((err) => {
@@ -41,28 +48,28 @@ const IoTManagement: React.FC = () => {
             {/* === IoT Device Content === */}
             <div className="admin-dashboard-content">
                 <h2>IoT Device Management</h2>
-                <table>
-                    <thead>
-                    <tr>
-                        <th>Device ID</th>
-                        <th>Device Type</th>
-                        <th>Room ID</th>
-                        <th>Status</th>
-                        <th>Online</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    {devices.map((device: any, index: number) => (
-                        <tr key={index}>
-                            <td>{device.deviceId}</td>
-                            <td>{device.deviceType}</td>
-                            <td>{device.roomId}</td>
-                            <td>{device.status ? "On" : "Off"}</td>
-                            <td>{device.online ? "Online" : "Offline"}</td>
+                <div className="table-container">
+                    <table>
+                        <thead>
+                        <tr>
+                            <th>Device ID</th>
+                            <th>Type</th>
+                            <th>Room ID</th>
+                            <th>Status</th>
                         </tr>
-                    ))}
-                    </tbody>
-                </table>
+                        </thead>
+                        <tbody>
+                        {devices.map((device, index) => (
+                            <tr key={index}>
+                                <td>{device.id}</td>
+                                <td>{device.type}</td>
+                                <td>{device.room_id}</td>
+                                <td>{device.status ? "On" : "Off"}</td>
+                            </tr>
+                        ))}
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
     );

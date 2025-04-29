@@ -5,15 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f26fd1aa-31f7-449e-bef2-77149a7551b1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../IoTManagement/src/business/equipmentBookingService.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IoTManagement/src/persistence/equipmentBookingRepository.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IoTManagement/src/presentation/controllers/equipmentBookingController.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IoTManagement/src/presentation/routes/equipmentBookingRoutes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IoTManagement/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/../IoTManagement/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Chat/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Chat/.idea/Chat.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Chat/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Chat/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Chat/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Chat/database/db.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../frontend/src/components/AdminProfile.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../StudentManagement/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../StudentManagement/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontend/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../frontend/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../frontend/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../frontend/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../frontend/src/components/BookingPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../frontend/src/components/BookingPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontend/src/components/Dashboard.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../frontend/src/components/Dashboard.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontend/src/components/Homepage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../frontend/src/components/Homepage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontend/src/components/IoT.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../frontend/src/components/IoT.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontend/src/components/LoginBox.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../frontend/src/components/LoginBox.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +90,7 @@
       <workItem from="1745259429026" duration="22675000" />
       <workItem from="1745364583575" duration="8045000" />
       <workItem from="1745422461919" duration="1000" />
-      <workItem from="1745812651833" duration="3952000" />
+      <workItem from="1745812651833" duration="5508000" />
     </task>
     <servers />
   </component>

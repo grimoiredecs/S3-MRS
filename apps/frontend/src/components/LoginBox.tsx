@@ -41,11 +41,19 @@ const LoginBox: FC = () => {
             localStorage.setItem("userId", userId);
             console.log("✅ Logged in. Token:", token);
             console.log("Logged in as:", role);
-            if (userId == '2852304' )
+            const lowerRole = role.toLowerCase();
+            if (lowerRole === "admin") {
                 navigate("/admin");
-            else
+            } else if (lowerRole === "staff") {
+                navigate("/IoTManagement"); // you can create this later if needed
+            } else if (lowerRole === "student") {
                 navigate("/home");
-        } catch (err: any) {
+            } else {
+                console.warn("Unknown role, defaulting to home");
+                navigate("/home");
+            }
+        }
+             catch (err: any) {
             console.error("❌ Login error:", err);
             setError(err.response?.data?.message || "Login failed");
         }
