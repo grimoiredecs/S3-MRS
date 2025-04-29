@@ -18,6 +18,8 @@ app.use('/devices', deviceRoutes);
 app.use((req, res) => {
     res.status(404).json({ error: 'Not Found' });
 });
+const equipmentBookingRoutes = require('./src/presentation/routes/equipmentBookingRoutes');
+app.use('/equipment-bookings', equipmentBookingRoutes);
 
 // ✅ Server start
 const PORT = process.env.PORT || 3004;

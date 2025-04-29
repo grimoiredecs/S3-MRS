@@ -21,6 +21,13 @@ export interface Booking {
 const durations = ["30 minutes", "45 minutes", "1 hour", "2 hours"];
 const seats = [1, 2, 3, 4, 5];
 
+interface Equipment {
+    id: string;
+    room_id: string;
+    type: string;
+    status: boolean;
+}
+
 // Generate time slots in 15-minute intervals
 const times: string[] = [];
 for (let hour = 7; hour <= 18; hour++) {
@@ -32,6 +39,8 @@ for (let hour = 7; hour <= 18; hour++) {
 const BookingPage: React.FC = () => {
     const userId = localStorage.getItem("userId");
     const [rooms, setRooms] = useState<any[]>([]);
+    const [equipments, setEquipments] = useState<Equipment[]>([]);
+    const [selectedEquipment, setSelectedEquipment] = useState<string>("");
     const [room, setRoom] = useState("");
     const [date, setDate] = useState("");
     const [startTime, setStartTime] = useState("");
@@ -52,6 +61,23 @@ const BookingPage: React.FC = () => {
         };
         fetchRooms();
     }, []);
+
+    useEffect(() => {
+        const fetchEquipments = async () => {
+            if (!room) {
+                setEquipments([]);
+                return;
+            }
+            try {
+                const response = await axios.get(`http://localhost:3004/devices`);
+                const roomEquipments = response.data.filter((e: Equipment) => e.room_id === room && e.status === true);
+                setEquipments(roomEquipments);
+            } catch (error) {
+                console.error("Error fetching equipments:", error);
+            }
+        };
+        fetchEquipments();
+    }, [room]);
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
@@ -79,7 +105,8 @@ const BookingPage: React.FC = () => {
             roomId: room,
             startTime: startDateTime.toISOString(),
             endTime: endDateTime.toISOString(),
-            userNumber: Number(userNumber)
+            userNumber: Number(userNumber),
+            selectedEquipment: selectedEquipment
         };
 
         try {
@@ -102,6 +129,7 @@ const BookingPage: React.FC = () => {
         setStartTime("");
         setDuration("");
         setUserNumber("");
+        setSelectedEquipment("");
         setBooked(false);
     };
 
@@ -164,6 +192,20 @@ const BookingPage: React.FC = () => {
                                 <option key={num} value={num}>{num}</option>
                             ))}
                         </select>
+
+                        {equipments.length > 0 && (
+                            <>
+                                <label>Select Equipment (optional)</label>
+                                <select value={selectedEquipment} onChange={(e) => setSelectedEquipment(e.target.value)}>
+                                    <option value="">-- Choose an available equipment --</option>
+                                    {equipments.map((eq) => (
+                                        <option key={eq.id} value={eq.id}>
+                                            {eq.type} ({eq.id})
+                                        </option>
+                                    ))}
+                                </select>
+                            </>
+                        )}
 
                         {error && <p className="error-message">{error}</p>}
 
