@@ -9,3 +9,33 @@
   background-repeat: no-repeat;
   font-family: sans-serif;
 }
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.6);
+  color: rgb(0, 0, 0);
+  padding: 0.5rem 2rem;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}

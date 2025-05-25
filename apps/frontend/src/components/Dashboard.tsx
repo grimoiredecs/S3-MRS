@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { FaBell, FaComments, FaUserCircle } from "react-icons/fa";
-import ChatBox from "./ChatBox";
+import ChatBox from "../App";
 import "./Dashboard.css";
 
 const Dashboard: React.FC = () => {
@@ -44,10 +44,10 @@ const Dashboard: React.FC = () => {
           style={{ cursor: "pointer" }}
         />
         <div className="nav-links">
+          
           <Link to="/home">Home</Link>
           <Link to="/dashboard">Dashboard</Link>
           <Link to="/book">Book</Link>
-          <Link to="/profile">Profile</Link>
         </div>
         <div className="nav-icons">
           <FaBell />

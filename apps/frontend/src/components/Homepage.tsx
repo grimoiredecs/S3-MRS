@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { FaBell, FaComments, FaUserCircle } from "react-icons/fa";
-import ChatBox from "./ChatBox";
 import { Link } from "react-router-dom";
+import ChatBox from "../App";   
 import "./HomePage.css";
 
 const HomePage: React.FC = () => {
@@ -31,8 +31,8 @@ const HomePage: React.FC = () => {
 
                 <div className="nav-links">
                     <Link to="/home">Home</Link>
-                    <Link to = "/Dashboard"> Dashboard</Link>
-                    <Link to="/book">Book</Link> {/* ✅ working router link */}
+                    <Link to="/dashboard">Dashboard</Link>
+                    <Link to = "/book">Book</Link>
                 </div>
 
                 <div className="nav-icons">

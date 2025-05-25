@@ -23,8 +23,9 @@ const ReportsPage: React.FC = () => {
                 <img src="/bklogo.png" alt="BK Logo" className="logo" />
                 <div className="nav-links">
                     <Link to="/admin">Home</Link>
-                    <Link to="/dashboard">Dashboard</Link>
-                    <Link to="/report">Report</Link>
+                    <Link to="/admindashboard">Dashboard</Link>
+                    <Link to = "/dashboard">Book</Link>
+                    <Link to="/report">Reports</Link>
                 </div>
             </nav>
 

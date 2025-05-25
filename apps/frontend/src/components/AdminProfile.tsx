@@ -1,5 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { FaBell, FaUserCircle } from "react-icons/fa";
 import "./ProfilePage.css";
 
 
@@ -8,20 +9,30 @@ const studentInfo = {
     profilePic: "/default-profile.png",
     adminId: "2852304",
     email: "staff3@hcmut.edu.vn",
+    
 };
 
 
-
 const AdminProfile: React.FC = () => {
+    const navigate = useNavigate();
+
     return (
         <div className="homepage">
             {/* Navbar */}
             <nav className="navbar">
                 <img src="/bklogo.png" alt="BK Logo" className="logo" />
                 <div className="nav-links">
-                    <Link to="/home">Home</Link>
-                    <a href="#">Dashboard</a>
-                    <Link to="/book">Book</Link>
+                    <Link to="/admin">Home</Link>
+                    <Link to="/admindash">Dashboard</Link>
+                    {/* <Link to="/book">Book</Link> */}
+                </div>
+
+                <div className="nav-icons">
+                    <FaBell />
+                    <FaUserCircle
+                        onClick={() => navigate("/adminprofile")}
+                        style={{ cursor: "pointer" }}
+                    />
                 </div>
             </nav>
 

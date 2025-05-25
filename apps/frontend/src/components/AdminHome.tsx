@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { FaBell, FaComments, FaUserCircle } from "react-icons/fa";
+import { FaBell, FaUserCircle } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import "./AdminHome.css"
 
@@ -12,10 +12,11 @@ const AdminHome: React.FC = () => {
             {/* === Navbar === */}
             <nav className="navbar">
                 <img src="/bklogo.png" alt="BK Logo" className="logo" />
-
                 <div className="nav-links">
                     <Link to="/admin">Home</Link>
-                    <Link to="/admindash" > Dashboard</Link>
+                    <Link to="/admindash">Dashboard</Link>
+                    {/* <Link to = "/Board">Book</Link>
+                    <Link to="/report">Reports</Link> */}
 
                 </div>
 
@@ -23,7 +24,7 @@ const AdminHome: React.FC = () => {
                     <FaBell />
 
                     <FaUserCircle
-                        onClick={() => navigate("/profile")}
+                        onClick={() => navigate("/adminprofile")}
                         style={{ cursor: "pointer" }}
                     />
 

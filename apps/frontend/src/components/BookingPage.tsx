@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { useUserContext } from "../context/UserContext";
-import {Link} from "react-router-dom";
+import {Link,useNavigate} from "react-router-dom";
+import { FaBell, FaComments, FaUserCircle } from "react-icons/fa";
+
 import axios from "axios";
 import "./BookingPage.css";
 import "./LoginBox"
@@ -20,7 +22,6 @@ export interface Booking {
 
 const durations = ["30 minutes", "45 minutes", "1 hour", "2 hours"];
 const seats = [1, 2, 3, 4, 5];
-
 interface Equipment {
     id: string;
     room_id: string;
@@ -37,6 +38,9 @@ for (let hour = 7; hour <= 18; hour++) {
 }
 
 const BookingPage: React.FC = () => {
+    const [showChat, setShowChat] = useState(false);
+
+    const navigate = useNavigate();
     const userId = localStorage.getItem("userId");
     const [rooms, setRooms] = useState<any[]>([]);
     const [equipments, setEquipments] = useState<Equipment[]>([]);
@@ -141,6 +145,17 @@ const BookingPage: React.FC = () => {
                     <Link to="/home">Home</Link>
                     <Link to = "/Dashboard">Dashboard</Link>
                     <Link to="/book">Book</Link>
+                </div>
+                <div className="nav-icons">
+                    <FaBell />
+                    <FaComments
+                    onClick={() => setShowChat((prev) => !prev)}
+                    style={{ cursor: "pointer" }}
+                    />
+                    <FaUserCircle
+                    onClick={() => navigate("/profile")}
+                    style={{ cursor: "pointer" }}
+                    />
                 </div>
             </nav>
 

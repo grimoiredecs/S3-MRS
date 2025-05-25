@@ -23,14 +23,15 @@ const AdminDashboard: React.FC = () => {
 
                 <div className="nav-links">
                     <Link to="/admin">Home</Link>
-                    <Link to="/admindashboard">Dashboard</Link>
-                    <Link to="/report">Reports</Link>
+                    <Link to="/admindash">Dashboard</Link>
+                    {/* <Link to = "/dashboard">Book</Link>
+                    <Link to="/report">Reports</Link> */}
                 </div>
 
                 <div className="nav-icons">
                     <FaBell />
                     <FaUserCircle
-                        onClick={() => navigate("/profile")}
+                        onClick={() => navigate("/adminprofile")}
                         style={{ cursor: "pointer" }}
                     />
                 </div>
