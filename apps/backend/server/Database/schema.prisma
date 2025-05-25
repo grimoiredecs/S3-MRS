@@ -1,0 +1,4 @@
+model Student{
+    id String,
+        
+}
