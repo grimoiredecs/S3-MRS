@@ -11,7 +11,6 @@ const LoginBox: FC = () => {
     const [error, setError] = useState<string>("");
     const navigate = useNavigate();
     const { setUserId } = useUserContext();
-    navigate("/home");
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
