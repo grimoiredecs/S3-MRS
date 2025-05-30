@@ -1,74 +1,46 @@
-// controllers/roomController.js (Example)
+const express = require('express');
+const http = require('http'); // Node.js built-in HTTP module
+const { Server } = require('socket.io'); // Socket.IO server
 
-const { RoomService } = require('../Services/RoomService');
+const app = express();
+const server = http.createServer(app); // Create an HTTP server using your Express app
 
-const roomService = new RoomService(); // Instantiate the service
-
-// GET /api/rooms/:id
-exports.getRoomById = async (req, res, next) => {
-    try {
-        const roomId = parseInt(req.params.id, 10); // Ensure ID is an integer
-        const room = await roomService.getRoomDetails(roomId);
-        res.json(room);
-    } catch (error) {
-        // Use next(error) to pass errors to a global error handling middleware
-        // This middleware can then decide appropriate HTTP status codes (404 for "not found", 400 for "invalid ID")
-        next(error);
+const io = new Server(server, {
+    cors: {
+        origin: "*", // Adjust this to your frontend's URL in production
+        methods: ["GET", "POST"]
     }
-};
+});
 
-// GET /api/rooms
-exports.getAllRooms = async (req, res, next) => {
-    try {
-        const rooms = await roomService.getAllRooms();
-        res.json(rooms);
-    } catch (error) {
-        next(error);
-    }
-};
+// Your regular Express routes and middleware go here
+app.get('/', (req, res) => {
+    res.sendFile(__dirname + '/index.html'); // Example: serve an HTML file
+});
 
-// POST /api/rooms/:id/book
-exports.bookSeatsInRoom = async (req, res, next) => {
-    try {
-        const roomId = parseInt(req.params.id, 10);
-        const { numberOfSeats } = req.body; // Assuming the request body has { numberOfSeats: X }
-        // You would get userId from the authenticated user (e.g., from req.currentUser set by API Gateway)
-        const userId = req.currentUser ? req.currentUser.id : null; // Example: assuming req.currentUser is set by auth middleware
+// Socket.IO event handling
+io.on('connection', (socket) => {
+    console.log('A user connected');
 
-        const result = await roomService.bookSeats(roomId, numberOfSeats, { userId });
-        res.status(200).json(result);
-    } catch (error) {
-        // Example of custom error handling by the controller or passed to global error middleware
-        if (error.message.includes("Invalid") || error.message.includes("positive number")) {
-            return res.status(400).json({ message: error.message });
-        }
-        if (error.message.includes("Room with ID") && error.message.includes("not found")) {
-            return res.status(404).json({ message: error.message });
-        }
-        if (error.message.includes("Not enough seats available")) {
-            return res.status(409).json({ message: error.message }); // 409 Conflict for resource state
-        }
-        next(error); // Pass other errors to generic error handler
-    }
-};
+    socket.on('disconnect', () => {
+        console.log('User disconnected');
+    });
 
-// POST /api/rooms/:id/close (Example for setting unavailable)
-exports.closeRoom = async (req, res, next) => {
-    try {
-        // Add authorization check here: Only admins can close rooms
-        // if (!req.currentUser || !req.currentUser.roles.includes('admin')) {
-        //     return res.status(403).json({ message: 'Forbidden: Admin access required to close rooms.' });
-        // }
+    socket.on('chat message', (msg) => {
+        console.log('message: ' + msg);
+        io.emit('chat message', msg); // Broadcast the message to all connected clients
+    });
 
-        const roomId = parseInt(req.params.id, 10);
-        const result = await roomService.setRoomUnavailable(roomId);
-        res.status(200).json(result);
-    } catch (error) {
-        if (error.message.includes("Room with ID") && error.message.includes("not found")) {
-            return res.status(404).json({ message: error.message });
-        }
-        next(error);
-    }
-};
+    // Example: If a room gets booked, notify clients
+    socket.on('bookRoom', (data) => {
+        // Call your RoomService.bookSeats here
+        // If successful:
+        // io.emit('roomUpdated', { roomId: data.roomId, newRemaining: updatedRoom.remaining });
+    });
+});
 
-// ... other controller methods
+
+// Start the HTTP server (which Socket.IO is attached to)
+const PORT = process.env.PORT || 3000;
+server.listen(PORT, () => {
+    console.log(`Express and Socket.IO server running on port ${PORT}`);
+});

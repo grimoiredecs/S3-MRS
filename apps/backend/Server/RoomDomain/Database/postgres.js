@@ -1,11 +1,22 @@
-require('dotenv').config();
+// Database/connection/postgres.js (ES Module version)
 
-const {Client} = require('pg');
-// test Postgres connection
+import 'dotenv/config'; // Modern way to load .env in ES Modules
 
-const pool = new Client({
-    connectionString: process.env.POSTGRES
-})
+import pg from 'pg'; // Import the entire 'pg' module
+
+console.log("Begin connectio")
+const connectionString = "postgresql://postgres:dtHqABKszwCMLqBCakvYvLliVMyXGpWT@shuttle.proxy.rlwy.net:50296/railway"
+// Use process.env.POSTGRES directly, as dotenv/config loads it
+const pool = new pg.Client({ // Correctly access Client from the imported pg object
+    connectionString
+
+});
+
+// Test Postgres connection - this should still run
+pool.connect()
+    .then(() => console.log('PostgreSQL client connected successfully!'))
+    .catch(err => console.error('PostgreSQL client connection error:', err.stack));
 
 
-module.exports = pool;
+// Export the pool instance as the default export
+export default pool;
