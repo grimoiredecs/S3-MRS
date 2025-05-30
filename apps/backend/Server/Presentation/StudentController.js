@@ -1,7 +1,5 @@
-// Presentation/studentController.js
-
 import express from 'express';
-import { StudentServices } from '../Business/StudentServices.js'; // Path from Presentation to services
+import { StudentServices } from '../Business/StudentServices.js'; // Adjust the path if needed
 
 /**
  * Creates and returns an Express Router configured for Student-related API endpoints.

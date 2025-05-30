@@ -1,7 +1,7 @@
 // services/RoomService.js
 
-// Import the RoomRepository we just refined
-const { RoomRepository } = require('../Persistence/RoomRepository');
+// Import the Room we just refined
+const { Room } = require('../Persistence/Room.js');
 
 // Assume you might have other services for a complete booking system
 // const { UserService } = require('./UserService');
@@ -11,7 +11,7 @@ const { RoomRepository } = require('../Persistence/RoomRepository');
 class RoomService {
     constructor() {
         // Initialize repositories and other services this service depends on
-        this.roomRepository = new RoomRepository();
+        this.roomRepository = new Room();
         // this.userService = new UserService(); // Example dependency
         // this.bookingRepository = new BookingRepository(); // Example dependency
         // this.notificationService = new NotificationService(); // Example dependency
@@ -63,7 +63,7 @@ class RoomService {
         }
 
         try {
-            // 2. Orchestration - Delegate to RoomRepository for atomic seat update
+            // 2. Orchestration - Delegate to Room for atomic seat update
             const updatedRoom = await this.roomRepository.updateRemainingSeats(roomId, numberOfSeatsToBook);
 
             // 3. Further Business Logic / Orchestration (Example: creating a booking record)
