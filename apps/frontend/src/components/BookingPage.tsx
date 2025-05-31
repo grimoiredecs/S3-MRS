@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useUserContext } from "../context/UserContext";
 import {Link,useNavigate} from "react-router-dom";
-import { QRCode } from "react-qrcode-logo"; // or from "qrcode.react"
 import { FaBell, FaComments, FaUserCircle } from "react-icons/fa";
 
 import axios from "axios";
