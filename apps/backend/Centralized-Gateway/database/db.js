@@ -7,14 +7,15 @@ const connectionString =  "postgresql://postgres:jUHLvNUGrqfgfzTsLxljlUHcEqmJOzq
 
 
 // db.js
-const { Pool } = require('pg');
-require('dotenv').config();
+import pg from 'pg';
+import dotenv from 'dotenv';
+dotenv.config();
 
-const pool = new Pool({
+const { Client } = pg;
+
+const pool = new Client({
     connectionString: connectionString,
-    ssl: {
-        rejectUnauthorized: false
-    }
 });
 
-module.exports = pool; // ✅ EXPORTS THE POOL OBJECT
+await pool.connect();
+export default pool;

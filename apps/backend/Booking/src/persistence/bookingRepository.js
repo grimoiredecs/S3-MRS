@@ -31,7 +31,7 @@ const createBooking = async (bookingData) => {
         const { userId, roomId, startTime, endTime, userNumber } = bookingData;
 
         // 1. Verify student exists
-        await verifyStudent(userId);
+       // await verifyStudent(userId);
 
         // 2. Prevent overlapping bookings by same student
         const conflict = await Booking.findOne({

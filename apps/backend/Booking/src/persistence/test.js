@@ -1,27 +1,34 @@
-// testRepository.js
 const mongoose = require('mongoose');
-require('dotenv').config(); // if you use .env
-const { getAllBookings } = require('./bookingRepository'); // adjust your path
-const MONGO_URI ="mongodb+srv://Cluster76516:WGtse3VmfVZx@cluster76516.zzq9k.mongodb.net/?retryWrites=true&w=majority&appName=Cluster76516"
 
+mongoose.connect('mongodb+srv://Cluster76516:WGtse3VmfVZx@cluster76516.zzq9k.mongodb.net/?retryWrites=true&w=majority&appName=Cluster76516', {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+})
+    .then(() => console.log('✅ MongoDB connected'))
+    .catch(err => console.error('❌ MongoDB connection error:', err));
 
-async function test() {
-    try {
-        // ✅ Connect to MongoDB manually (if not auto-connected yet)
-        await mongoose.connect(MONGO_URI, {
-            useNewUrlParser: true,
-            useUnifiedTopology: true,
-        });
+mongoose.connect('mongodb+srv://Cluster76516:WGtse3VmfVZx@cluster76516.zzq9k.mongodb.net/?retryWrites=true&w=majority&appName=Cluster76516', {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+})
+    .then(async () => {
+        console.log('✅ MongoDB connected');
 
-        console.log('✅ Connected to MongoDB');
+        const { createBooking } = require('./bookingRepository');
 
-        const bookings = await getAllBookings();
-        console.log('✅ Retrieved bookings:', bookings);
-    } catch (err) {
-        console.error('❌ Test failed:', err.message);
-    } finally {
-        mongoose.disconnect();
-    }
-}
+        try {
+            const result = await createBooking({
+                userId: '2252304',
+                roomId: '303-A4',
+                startTime: new Date('2025-06-01T08:00:00'),
+                endTime: new Date('2025-06-01T10:00:00'),
+                userNumber: 2
+            });
+            console.log('✅ Booking created:', result);
+        } catch (err) {
+            console.error('❌ Error:', err.message);
+        }
 
-test();
+        mongoose.connection.close();
+    })
+    .catch(err => console.error('❌ MongoDB connection error:', err));

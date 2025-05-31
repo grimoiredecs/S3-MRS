@@ -1,6 +1,0 @@
-model Student{
-    id String   @id @unique
-    email String @unique
-    name String
-    year Int
-}

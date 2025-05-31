@@ -3,12 +3,12 @@ import express from 'express';
 
 /**
  * Creates and returns an Express Router for Booking endpoints.
- * @param {object} bookingService - The BookingService instance to use.
- * @returns {express.Router} Configured router with booking endpoints.
+ * @param {object} bookingService - An instance of BookingService.
+ * @returns {express.Router}
  */
 function createBookingController(bookingService) {
     if (!bookingService) {
-        throw new Error('BookingService instance must be provided to BookingController.');
+        throw new Error('BookingService must be provided to BookingController.');
     }
 
     const router = express.Router();

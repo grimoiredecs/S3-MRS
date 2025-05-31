@@ -12,13 +12,16 @@ import createRoomController from './Presentation/RoomController.js';
 import BookingService from './Business/BookingServices.js';
 import {StudentServices} from './Business/StudentServices.js';
 import {RoomServices} from './Business/RoomServices.js';
+import bookingRouter from './Presentation/bookingRoutes.js'; // adjust path
+
 
 // Connect to MongoDB or PostgreSQL if needed
-import connectDB from './database/mongodb.js'; // optional, for MongoDB
+import connectDB from './database/mongodb.js';
+import BookingController from "./Business/BookingServices.js"; // optional, for MongoDB
 
 // Initialize app
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 4022;
 
 // Middleware
 app.use(cors());
@@ -30,7 +33,7 @@ app.use(express.urlencoded({ extended: true }));
 await connectDB(); // Comment out if using PostgreSQL only
 
 // Routes
-app.use('/api/bookings', createBookingController(BookingService));
+app.use('/bookings', bookingRouter); // Now all endpoints are /bookings
 app.use('/api/students', createStudentController(new StudentServices()));
 app.use('/api/rooms', createRoomController(new RoomServices()));
 

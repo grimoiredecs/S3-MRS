@@ -1,9 +1,9 @@
-// Persistence/RoomRepository.js (ES Module version)
+// Persistence/Room.js (ES Module version)
 
 // Import the 'pool' default export from the postgres.js module
 import pool from '../Database/postgres.js'; // IMPORTANT: Note the .js extension
 
-class RoomRepository {
+class Room {
 
     /**
      * Fetches a single room by ID.
@@ -107,5 +107,5 @@ class RoomRepository {
     }
 }
 
-// Export the RoomRepository class using ES Module named export
-export { RoomRepository };
+// Export the Room class using ES Module named export
+export { Room };

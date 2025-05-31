@@ -53,11 +53,8 @@ const getRoomById = async (room_id) => {
 };
 
 // ✅ Read: Get all rooms
-const getAllRooms = async () => {
-    const res = await pool.query(
-        `SELECT * FROM rooms r
-         JOIN equipments e ON r.room_id = e.room_id`
-    );
+const getAllrooms = async () => {
+    const res = await pool.query(`SELECT * FROM rooms`);
     return res.rows;
 };
 
@@ -108,6 +105,7 @@ const updateRoom = async (room) => {
     }
 };
 
+/*
 // ✅ Delete room and its equipment
 const deleteRoom = async (room_id) => {
     const client = await pool.connect();
@@ -125,11 +123,11 @@ const deleteRoom = async (room_id) => {
         client.release();
     }
 };
+*/
 
 module.exports = {
     createRoom,
     getRoomById,
-    getAllRooms,
+    getAllrooms,
     updateRoom,
-    deleteRoom
 };

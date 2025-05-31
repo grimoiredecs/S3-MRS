@@ -1,13 +1,16 @@
 const { Pool } = require('pg');
-require('dotenv').config(); // make sure this line is included
+require('dotenv').config();
 
 const pool = new Pool({
-    connectionString:"postgresql://admin:123@localhost:5709/admin", // ✅ USE this
-
+    connectionString: "postgresql://postgres:dtHqABKszwCMLqBCakvYvLliVMyXGpWT@shuttle.proxy.rlwy.net:50296/railway",
 });
 
-pool.on('connect', () => {
-    console.log('✅ Connected to PostgreSQL (Room)');
-});
+pool.connect()
+    .then(() => console.log('✅ Connected to PostgreSQL'))
+    .catch((err) => {
+        console.error('❌ Failed to connect to PostgreSQL:', err.message);
+        // Optional: Exit process if DB is essential
+        process.exit(1);
+    });
 
 module.exports = pool;

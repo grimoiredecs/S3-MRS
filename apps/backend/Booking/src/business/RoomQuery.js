@@ -2,7 +2,7 @@ const RoomQuery = require('../persistence/roomRepository');
 
 const RoomQueryService = {
   getAllRooms() {
-    return RoomQuery.getAllRooms();
+    return RoomQuery.getAllrooms();
   },
 
   getRoomById(roomId) {
